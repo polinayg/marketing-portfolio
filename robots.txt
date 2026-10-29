@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://polinayg.github.io/marketing-portfolio/sitemap.xml
