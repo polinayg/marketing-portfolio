@@ -3,7 +3,7 @@
 Live site: https://polinayg.github.io/marketing-portfolio/
 
 A static, dependency-free portfolio for GitHub Pages: home (selected work, analytics, about, contact),
-five case studies (Axe & Kindle, NxtDib, Equipio, Every Window, Levo Aero) and a filterable creative gallery
+five case studies (Axe & Kindle, NxtDib, Equipio, Every Window, Levo Aero) plus Analytics & Reporting and Email Marketing capability studies, and a filterable creative gallery
 with a keyboard/swipe lightbox.
 
 ## Structure
@@ -19,11 +19,15 @@ pip install pillow
 python3 tools/build.py
 ```
 To add a carousel: drop WebP files into `assets/img/<brand>/`, create `-sm.webp` versions (640px wide),
-add a set to the project's `sets` list in `tools/content.py`, rebuild.
+Brand studies live in `PROJECTS`; capability studies live in `CAPABILITIES`. Both are built and included in the sitemap; only brands appear in the homepage project list and gallery.
+
+Add a set to the project's `sets` list in `tools/content.py`, rebuild.
 
 ## Data integrity
-Metrics come only from the Sprout Social “Post Performance (NXT)” export, Sept 17, 2025 – Oct 26, 2026.
-No sales, conversions or follower growth are claimed. Curated third-party Reels are labeled and linked, never embedded as original work.
+Homepage social metrics come from the Sprout Social “Post Performance (NXT)” export, Sept 17, 2025 – Oct 26, 2026.
+Capability studies separately cite the historical analytics presentation shown in `assets/img/analytics/`.
+Email figures describe program-level observations; 2025 is an interim snapshot. No attributable email revenue or conversion lift is claimed.
+The analytics study labels approximate follower gains as ad-assisted and omits company revenue. Curated third-party Reels are labeled and linked, never embedded as original work.
 
 ## Backup
 The pre-redesign site is preserved at git tag `v1-original-backup`.

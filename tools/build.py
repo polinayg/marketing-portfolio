@@ -160,7 +160,7 @@ def case_page(p, nxt):
 {"".join(body)}
 </div>
 <section class="work" id="work-{p['slug']}" style="--accent:{p['brand']['accent_on_paper']}"><div class="wrap">
-<div class="eyebrow">The Work</div><h2>See the <em>work.</em></h2>
+<div class="eyebrow">The Work</div><h2>See the <em>creative.</em></h2>
 <p class="lede" style="margin-top:18px">Tap any slide to view it full size. Use arrow keys or swipe to move through a carousel.</p>
 {sets}
 {reels_block(p)}
@@ -216,14 +216,14 @@ def home():
 <div><dt>Focus</dt><dd>Social &amp; content strategy</dd></div>
 <div><dt>Brands</dt><dd>5 across B2C &amp; B2B</dd></div>
 <div><dt>Published (Sprout)</dt><dd>419 Instagram feed posts</dd></div>
-<div><dt>Toolkit</dt><dd>Canva · Buffer · Drip · GA4 · Sprout</dd></div>
+<div><dt>Toolkit</dt><dd>Canva · Buffer · Sprout · Drip · AI</dd></div>
 </dl></div>
 <div class="mosaic" aria-label="A sample of original campaign designs">{mosaic}</div>
 </div></section>
 <div class="wrap"><p class="ticker" aria-label="Brands featured"><span>Axe &amp; Kindle</span><span>NxtDib</span><span>Equipio</span><span>Every Window</span><span>Levo Aero</span></p></div>
 
 <section class="section" id="work"><div class="wrap">
-<div class="split"><div><div class="eyebrow">01 — Selected Work</div><h2>Five brands. <em>Every</em> channel.</h2></div>
+<div class="split"><div><div class="eyebrow">01 — Selected Work</div><h2>Five brands. <em>One</em> standard.</h2></div>
 <p class="lede">Each case study follows the same structure — challenge, strategy, my role, execution, results and takeaways — and shows the actual campaign creative. Brand colors belong to the brands; the analysis is mine.</p></div>
 <div class="projects">{"".join(projects)}</div>
 <div class="btn-row" style="margin-top:70px"><a class="btn" href="gallery.html">Open the full creative gallery →</a></div>
@@ -310,9 +310,11 @@ if __name__ == "__main__":
     write("index.html", home())
     write("gallery.html", gallery())
     write("404.html", notfound())
-    ps = C.PROJECTS
-    for i, p in enumerate(ps):
-        write(p["file"], case_page(p, ps[(i + 1) % len(ps)]))
+    ps = C.CASE_STUDIES
+    # Preserve the five-brand next-study loop; give capabilities their own loop.
+    for group in (C.PROJECTS, C.CAPABILITIES):
+        for i, p in enumerate(group):
+            write(p["file"], case_page(p, group[(i + 1) % len(group)]))
     urls = [""] + ["gallery.html"] + [p["file"] for p in ps]
     sm = "".join(f"<url><loc>{SITE}{u}</loc><lastmod>{C.DATE}</lastmod></url>" for u in urls)
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
