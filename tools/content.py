@@ -3,7 +3,7 @@
 'Post Performance (NXT) September 17, 2025 - October 26, 2026.csv' (Instagram feed posts; 2 Stories excluded)."""
 
 SITE_URL = "https://polinayg.github.io/marketing-portfolio/"
-VERSION = "2026-10-28"
+VERSION = "2026-10-29"
 DATE = "2026-10-28"
 EMAIL = "polinayg99@gmail.com"
 LINKEDIN = "https://www.linkedin.com/in/polina-gaydamachenko/"
@@ -302,8 +302,9 @@ EQ = {
     "card_text": "Gear breakdowns, rig curation and RFQ education for a film and TV equipment rental marketplace.",
     "kpis": [("3,685", "Engagements"), ("526", "Saves"), ("365", "Shares")],
     "chips": ["Creator curation", "Community content", "RFQ education", "LinkedIn"],
-    "cover_label": "Case study · creative exports coming soon",
-    "pending_note": "<b>Original Equipio creative is being exported from Canva</b> (RFQ explainer carousels and single-post templates) and will appear here. In the meantime, the curated Reels below are linked with their verified metrics.",
+    "cover_folder": "equipio", "cover": [("eq-car1-01", "Equipio carousel cover: “Renting gear, the smart way”"),
+                                          ("eq-car2-01", "Equipio carousel cover: “How Equipio works — built on vendor trust”"),
+                                          ("eq-tpl-01", "Equipio post: “Upload your RFQ. Get quotes. Fast.”")],
     "cs": {
         "challenge": {"h": "Relevance in a <em>technical</em> community.",
             "body": """<p>Equipio's audience is cinematographers, gaffers, producers and rental houses. They follow accounts that show interesting rigs and real productions. The challenge was to become part of that feed while still steering people to Equipio's value proposition: request a quote for the gear you need instead of hunting vendor by vendor.</p>"""},
@@ -325,6 +326,7 @@ EQ = {
 <li><strong>Rig breakdowns</strong> like recreating the “Severance” camera look, gimbal and stabilizer setups, and precision crane moves.</li>
 <li><strong>Captions that name the gear</strong> — cameras, lenses, rigs — because that's what this audience searches for and saves.</li>
 <li><strong>RFQ explainers</strong> that show how renting through Equipio works.</li>
+<li><strong>Template system:</strong> single-post formats for value props, tips and FAQs so original posts stay on-message between curated Reels.</li>
 <li><strong>Mix:</strong> 103 Reels, 32 carousels and 18 photo posts in the period.</li></ul>"""},
         "results": {"h": "Strong attention, <em>honestly attributed.</em>",
             "body": """<div class="metric-grid"><div><b>153</b><span>Feed posts published</span></div><div><b>3,685</b><span>Engagements</span></div><div><b>526</b><span>Saves</span></div><div><b>365</b><span>Shares</span></div></div>
@@ -341,7 +343,33 @@ EQ = {
 <li>Next step: tag RFQ links by post so social can be judged on quote requests.</li>
 </ol>"""},
     },
-    "sets": [],
+    "sets": [
+        {"folder": "equipio", "title": "Renting gear, the smart way", "format": "Carousel · 6 slides",
+         "desc": "The RFQ process told as a four-beat story: the problem, the first step, the magic, the win.",
+         "slides": S("eq-car1", ["Cover: “Renting gear, the smart way” over a cinema camera rig",
+             "“The problem: Need gear but don't want to chase quotes, call vendors, or email six times?”",
+             "“The 1st step: Submit your gear list. Upload once. Just once.” over a laptop",
+             "“The magic: Vendors quote you directly. Multiple offers. Transparent terms.”",
+             "“The win: Pick your favorite. Book it. Done. No forms. No cold calls. Just gear.”",
+             "End slide: “Your all-in-one RFQ platform for gear rentals” with equipio.com"])},
+        {"folder": "equipio", "title": "How Equipio works — built on vendor trust", "format": "Carousel · 6 slides",
+         "desc": "A trust-first version of the explainer, answering the producer's real question: can I trust who I'm renting from?",
+         "slides": S("eq-car2", ["Cover: “How Equipio works — built on vendor trust” on a film set",
+             "“The question: Can I trust who I'm renting from?”",
+             "“Upload your list: Submit your RFQ. Get quotes directly from vetted, established vendors.”",
+             "“Review real quotes: Compare quotes. Review vendors. Make the call.” over camera bodies",
+             "“Book with confidence: The right gear from the right source. No mystery gear.”",
+             "End slide: “Your all-in-one RFQ platform. Trusted vendors. Transparent terms.”"])},
+        {"folder": "equipio", "title": "Single-post template system", "format": "Static posts · 7 shown",
+         "desc": "Reusable single-image formats — value props, a pro tip and a producer FAQ — that keep the RFQ message consistent between curated Reels.",
+         "slides": S("eq-tpl", ["“Upload your RFQ. Get quotes. Fast.” — one request, multiple vendors, compare side-by-side",
+             "“We are here to solve a problem you forgot existed” — chasing gear quotes",
+             "“Streamline your RFQ process with Equipio” — the platform on a laptop beside camera gear",
+             "“New bids. New brands. New business.” — vendor-side message",
+             "“You wouldn't list Google Ads as a pass-through. Equipio is the same — your sales engine, not your markup.”",
+             "“Pro tip: Submit RFQ early to beat rental rush and get better rates.”",
+             "Producer FAQ card: “Can I use my usual vendor?”"])},
+    ],
     "reels": [
         {"title": "Recreating the “Severance” look", "url": "https://www.instagram.com/reel/DRKTZA-iqnH/", "eng": "282", "shares": "33", "saves": "22",
          "note": "Nov 17, 2025 · gear breakdown · 4,047 accounts reached · 5,220 views."},
@@ -445,13 +473,14 @@ LEVO = {
     "headline": "Making private aviation <em>pricing</em> clear.",
     "lede": "Levo Aero is a private aviation marketplace. My work there sits closer to the website and paid media: landing pages that explain pricing tiers, and ad creative for social channels.",
     "facts": [("Role", "Digital marketer"), ("Channels", "Website · LinkedIn · Instagram"),
-              ("Tools", "CMS · Canva"), ("Status", "Case study in progress")],
+              ("Tools", "CMS · Canva"), ("Performance data", "Not reported")],
     "card_title": "Making private aviation <em>pricing</em> clear.",
     "card_text": "Enterprise pricing landing pages built in the CMS, plus paid-social ad creative for LinkedIn and Instagram.",
     "kpis": [("4", "Enterprise pricing pages")],
     "chips": ["Landing pages", "CMS", "Pricing tiers", "Ad creative"],
-    "cover_label": "Case study · creative exports coming soon",
-    "pending_note": "<b>Levo ad creative is being exported from Canva</b> (LinkedIn and Instagram ad designs) and will appear here. No campaign performance data is reported for this project.",
+    "cover_folder": "levo", "cover": [("levo-story-01", "Levo story ad frame: “Your time.” over a private jet on a runway"),
+                                       ("levo-ig-ad-01", "Levo Instagram ad: “Private Jet Charter. On Your Schedule.”"),
+                                       ("levo-story-02", "Levo story ad frame: “Your schedule.” traveler in a jet cabin")],
     "cs": {
         "challenge": {"h": "A premium service needs a <em>clear</em> price story.",
             "body": """<p>Enterprise customers evaluating a private aviation platform need to understand what each tier includes and how to buy it. Those pages needed to exist as distinct, shareable URLs that sales conversations could point to.</p>"""},
@@ -461,7 +490,7 @@ LEVO = {
 <li>Support awareness with clean, on-brand ad creative sized for LinkedIn and Instagram.</li></ul>"""},
         "role": {"h": "Builder and <em>designer.</em>",
             "body": """<ul><li>Built four Enterprise pricing landing pages in the development CMS, starting from existing pages and adapting them to tiered pricing.</li>
-<li>Designed paid-social ad creative in Canva for LinkedIn and Instagram placements.</li></ul>"""},
+<li>Designed paid-social ad concepts in Canva for LinkedIn, Instagram feed and Instagram Stories, plus a landing-page hero concept.</li></ul>"""},
         "execution": {"h": "Pages first, <em>then promotion.</em>",
             "body": """<ul><li>Duplicated and restructured existing pages so all four tiers share a consistent layout.</li>
 <li>Set up unique URLs per tier for direct customer use.</li>
@@ -472,7 +501,23 @@ LEVO = {
             "body": """<ol class="takeaways"><li>Pricing pages are sales tools — one URL per tier makes them easy to share in a deal.</li>
 <li>Next step: add analytics events to each tier page so marketing can see which tier gets the most interest.</li></ol>"""},
     },
-    "sets": [],
+    "sets": [
+        {"folder": "levo", "title": "Instagram story sequence", "format": "Story ad · 3 frames", "status": "Ad concept", "ratio": "9/16",
+         "desc": "A three-beat story built on the brand promise — your time, your schedule, your destination — ending on a single CTA.",
+         "slides": S("levo-story", ["Story frame 1: “Your time.” over a private jet taxiing at sunset",
+             "Story frame 2: “Your schedule.” a traveler looking out a jet window",
+             "Story frame 3: “Your destination.” coastal landscape with a “Book now at Levo” button"])},
+        {"folder": "levo", "title": "LinkedIn ads", "format": "LinkedIn feed ads", "status": "Ad concept", "ratio": "1200/627", "wide": True,
+         "desc": "Two LinkedIn variants leading with a concrete route and a promise: instant quotes, vetted aircraft, no hidden fees.",
+         "slides": [("levo-li-ad-01", "LinkedIn ad: “Private Jet NYC → Miami. Instant quotes. Vetted aircraft. No hidden fees.”"),
+                    ("levo-li-ad-02", "LinkedIn ad variant: “Private Jet NYC → Miami” with a Get My Quote button")]},
+        {"folder": "levo", "title": "Instagram feed ad", "format": "Instagram ad", "status": "Ad concept", "ratio": "1/1",
+         "desc": "A square feed ad pairing an executive-travel moment with a single Book Now action.",
+         "slides": [("levo-ig-ad-01", "Instagram ad: “Private Jet Charter. On Your Schedule.” with a Book Now button")]},
+        {"folder": "levo", "title": "Landing page hero", "format": "Web design", "status": "Concept", "ratio": "16/10", "wide": True,
+         "desc": "A hero section design pairing the headline with a single “Book flight” action.",
+         "slides": [("levo-lp-01", "Landing page hero: “Private Jet Charter. On Your Schedule.” with a Book Flight button over a jet above clouds")]},
+    ],
 }
 
 PROJECTS = [AK, NX, EQ, EW, LEVO]

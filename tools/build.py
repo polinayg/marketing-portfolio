@@ -93,7 +93,7 @@ def badges(s):
     return '<div class="badges">' + "".join(out) + '</div>'
 
 def slideset(p, s, i):
-    sq = " sq" if s.get("square") else ""
+    sq = (" sq" if s.get("square") else "") + (" wide" if s.get("wide") else "")
     group = f'{p["slug"]}-{i}'
     figs = []
     n = len(s["slides"])
@@ -107,7 +107,7 @@ def slideset(p, s, i):
             '<button type="button" data-dir="1" aria-label="Scroll forward">→</button></div>') if n > 3 else ""
     return f"""<section class="set" data-carousel aria-labelledby="{group}-t">
 <div class="set-head"><div>{badges(s)}<h3 id="{group}-t">{E(s["title"])}</h3><p>{s["desc"]}</p></div>{ctrl}</div>
-<div class="track{sq}" tabindex="0" aria-label="{E(s['title'])} slides">{"".join(figs)}</div>
+<div class="track{sq}"{(' style="--ar:'+s['ratio']+'"') if s.get('ratio') else ''} tabindex="0" aria-label="{E(s['title'])} slides">{"".join(figs)}</div>
 </section>"""
 
 def reels_block(p):
