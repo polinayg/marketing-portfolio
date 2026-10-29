@@ -130,19 +130,29 @@ def brand_style(p):
 def redesign_comparison(c):
     figures = []
     for label, suffix in [("Before", "before"), ("After", "after")]:
-        path = f'assets/img/web-redesigns/{c["prefix"]}-{suffix}.webp'
+        path = f'assets/img/web-redesigns/{c["prefix"]}-{suffix}.png'
         w, h = dims(path)
         alt = f'{c["name"]} homepage {suffix} redesign, supplied full-page screenshot'
-        figures.append(f'<figure class="comparison-figure"><figcaption><b>{label}</b>'
-                       f'<a href="{path}" target="_blank" rel="noopener">Open {label.lower()} capture ↗</a></figcaption>'
+        figures.append(f'<figure class="comparison-figure comparison-{suffix}"><figcaption><b>{label}</b>'
+                       f'<span class="capture-links"><a href="{path}" target="_blank" rel="noopener">Open original PNG ↗</a><a href="{path}" download>Download PNG ↓</a></span></figcaption>'
                        f'<div class="capture-scroll" tabindex="0" role="region" aria-label="{E(c["name"])} {label.lower()} screenshot, scroll to explore">'
                        f'<img src="{path}" width="{w}" height="{h}" alt="{E(alt)}" loading="lazy" decoding="async"></div></figure>')
+    detail = ""
+    if c.get("detail"):
+        d = c["detail"]
+        path = d["path"]
+        w, h = dims(path)
+        detail = (f'<figure class="redesign-detail"><figcaption><span class="badge">Current site · Oct 29, 2026</span>'
+                  f'<h4>{E(d["title"])}</h4><p>{E(d["desc"])}</p></figcaption>'
+                  f'<a href="{path}" target="_blank" rel="noopener" aria-label="Open full-size {E(c["name"])} detail">'
+                  f'<img src="{path}" width="{w}" height="{h}" alt="{E(d["title"])} — current desktop site detail" loading="lazy" decoding="async"></a>'
+                  f'<p class="small"><a href="{path}" target="_blank" rel="noopener">Open full-size detail ↗</a></p></figure>')
     changes = "".join(f'<article class="reel"><h4>{E(title)}</h4><p>{E(body)}</p></article>'
                       for title, body in c["changes"])
     return (f'<section class="set" aria-labelledby="{c["id"]}"><div class="set-head"><div>'
             f'<div class="badges"><span class="badge">Homepage redesign · Before &amp; after</span></div>'
             f'<h3 id="{c["id"]}">{E(c["name"])}</h3><p>{E(c["summary"])}</p></div></div>'
-            f'<div class="comparison-grid">{"".join(figures)}</div><div class="reel-cards comparison-notes">{changes}</div></section>')
+            f'<div class="comparison-grid">{"".join(figures)}</div><div class="reel-cards comparison-notes">{changes}</div>{detail}</section>')
 
 def case_page(p, nxt):
     chapters = [("challenge", "Challenge"), ("strategy", "Strategy"), ("role", "My Role"),

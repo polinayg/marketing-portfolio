@@ -28,7 +28,7 @@ Brand studies live in `PROJECTS`; capability studies live in `CAPABILITIES`. Bot
 Add a set to the project's `sets` list in `tools/content.py`, rebuild.
 
 ## Website redesign comparisons
-`website-redesigns.html` features the confirmed NxtDib website build from scratch and compares supplied Every Window and Axe & Kindle homepage screenshots. `comparisons` in `tools/content.py` controls the copy and image prefixes. Full captures are under `assets/img/web-redesigns/`; matching `-preview.webp` and `-preview-sm.webp` crops support hero previews. `assets/css/web-redesigns.css` is loaded only for this page. Scroll regions and native image links work without JavaScript. Captures document visible design changes, not measured performance gains.
+`website-redesigns.html` features the confirmed NxtDib website build from scratch and compares supplied Every Window and Axe & Kindle homepage screenshots. `comparisons` in `tools/content.py` controls the copy and image prefixes. The four comparison PNGs under `assets/img/web-redesigns/` are byte-for-byte copies of the supplied originals, with open/download links and no image upscaling in the comparison panes. Fresh current-site desktop crops dated October 29, 2026 illustrate design details separately; `-current-preview.webp` and `-current-preview-sm.webp` support the hero. `assets/css/web-redesigns.css` is loaded only for this page. Scroll regions and native image links work without JavaScript. Captures document visible design changes, not measured performance gains.
 
 ## Data integrity
 Homepage social metrics come from the Sprout Social “Post Performance (NXT)” export, Sept 17, 2025 – Oct 26, 2026.
