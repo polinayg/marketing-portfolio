@@ -128,18 +128,19 @@ def brand_style(p):
     return f'--b-bg:{b["bg"]};--b-ink:{b["ink"]};--b-accent:{b["accent"]};--accent:{b["accent_on_paper"]}'
 
 def redesign_comparison(c):
+    """One before/after pair. Every pair is a full-page PDF capture: a scrollable WebP preview of the
+    PDF plus direct open/download links to the unchanged PDF in assets/docs/pdf/."""
     figures = []
+    page = c.get("page", "homepage")
     for label, suffix in [("Before", "before"), ("After", "after")]:
-        path = c.get("captures", {}).get(suffix, f'assets/img/web-redesigns/{c["prefix"]}-{suffix}.png')
-        original = c.get("originals", {}).get(suffix, path)
-        fmt = c.get("source_format", "PNG")
-        download_href = original + "&download=1" if fmt == "PDF" else original
-        download_attr = 'target="_blank" rel="noopener"' if fmt == "PDF" else "download"
+        key = f'{c["prefix"]}-{suffix}'
+        path = c.get("captures", {}).get(suffix, f'assets/img/web-redesigns/{key}-pdf-preview.webp')
+        original = c.get("originals", {}).get(suffix, f'assets/docs/pdf/{key}.pdf')
         w, h = dims(path)
-        alt = f'{c["name"]} homepage {suffix} redesign, supplied full-page screenshot'
+        alt = f'{c["name"]} {page} {suffix} redesign, full-page capture (preview of the PDF)'
         figures.append(f'<figure class="comparison-figure comparison-{suffix}"><figcaption><b>{label}</b>'
-                       f'<span class="capture-links"><a href="{original}" target="_blank" rel="noopener">Open original {fmt} ↗</a><a href="{download_href}" {download_attr}>Download {fmt} ↓</a></span></figcaption>'
-                       f'<div class="capture-scroll" tabindex="0" role="region" aria-label="{E(c["name"])} {label.lower()} screenshot, scroll to explore">'
+                       f'<span class="capture-links"><a href="{original}" target="_blank" rel="noopener">Open original PDF ↗</a><a href="{original}" download>Download PDF ↓</a></span></figcaption>'
+                       f'<div class="capture-scroll" tabindex="0" role="region" aria-label="{E(c["name"])} {E(page)} {label.lower()} capture, scroll to explore">'
                        f'<img src="{path}" width="{w}" height="{h}" alt="{E(alt)}" loading="lazy" decoding="async"></div></figure>')
     detail = ""
     if c.get("detail"):
@@ -154,10 +155,11 @@ def redesign_comparison(c):
                   f'<p class="small"><a href="{path}" target="_blank" rel="noopener">Open full-size detail ↗</a></p></figure>')
     changes = "".join(f'<article class="reel"><h4>{E(title)}</h4><p>{E(body)}</p></article>'
                       for title, body in c["changes"])
-    cls = "set comparison-pdf" if c.get("originals") else "set"
-    return (f'<section class="{cls}" aria-labelledby="{c["id"]}"><div class="set-head"><div>'
-            f'<div class="badges"><span class="badge">Homepage redesign · Before &amp; after</span></div>'
-            f'<h3 id="{c["id"]}">{E(c["name"])}</h3><p>{E(c["summary"])}</p></div></div>'
+    badge_label = c.get("badge", "Homepage redesign")
+    heading = c.get("heading", c["name"])
+    return (f'<section class="set comparison-pdf" aria-labelledby="{c["id"]}"><div class="set-head"><div>'
+            f'<div class="badges"><span class="badge">{badge_label} · Before &amp; after</span></div>'
+            f'<h3 id="{c["id"]}">{E(heading)}</h3><p>{E(c["summary"])}</p></div></div>'
             f'<div class="comparison-grid">{"".join(figures)}</div><div class="reel-cards comparison-notes">{changes}</div>{detail}</section>')
 
 def case_page(p, nxt):
