@@ -725,7 +725,7 @@ WEB_CS = {
     "cover_wide": True, "cover_folder": "web-redesigns",
     "cover": [("ew-current-preview", "Every Window current homepage desktop preview"),
               ("ak-current-preview", "Axe & Kindle current homepage desktop preview")],
-    "head_extra": '<link rel="stylesheet" href="assets/css/web-redesigns.css?v=2026-10-29-context">\n',
+    "head_extra": '<link rel="stylesheet" href="assets/css/web-redesigns.css?v=2026-10-29-mobile-2">\n',
     "cs": {
         "challenge": {"h": "Useful content needs a <em>clear hierarchy.</em>",
             "body": """<p>Each page had to introduce the brand, explain the offer and help visitors choose their next step. Every Window combines window selection, installation information and buyer education. Axe &amp; Kindle combines firewood shopping, live-fire cooking, delivery information, trust signals and a content library.</p><p>The earlier captures already contain substantial content. My redesign work focused on how that content is presented and organized.</p>"""},
