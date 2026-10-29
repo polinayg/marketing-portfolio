@@ -248,7 +248,7 @@ def bars(rows, maxv, fmt="{:,}", unit=""):
 
 def home():
     A = C.ANALYTICS
-    out = head("Polina Gaydamachenko — Multi-Brand Marketing Manager", C.HOME_META, "", extra='<link rel="stylesheet" href="assets/css/home.css?v=2026-10-29-finish">\n')
+    out = head("Polina Gaydamachenko — Multi-Brand Marketing Manager", C.HOME_META, "", extra='<link rel="stylesheet" href="assets/css/home.css?v=2026-10-29-portrait">\n')
     out += f'<script type="application/ld+json">{json.dumps(C.JSONLD)}</script>\n'
     out += header()
     mosaic = "".join(f'<a href="{f}" aria-label="{E(lbl)}">{picture(fo, n, alt, "(max-width:760px) 33vw, 200px", eager=i < 3)}</a>'
@@ -321,7 +321,7 @@ def home():
 </div></section>
 
 <section class="section" id="about"><div class="wrap split">
-<div><div class="eyebrow">03 — About</div><h2>Strategy, creative <em>and follow-through.</em></h2></div>
+<div class="about-intro"><div class="eyebrow">03 — About</div><h2>Strategy, creative <em>and follow-through.</em></h2><figure class="about-portrait"><img src="assets/img/polina-gaydamachenko.jpg" width="400" height="400" alt="Polina Gaydamachenko" loading="lazy" decoding="async"></figure></div>
 <div>{C.ABOUT}</div>
 </div></section>
 

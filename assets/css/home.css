@@ -23,3 +23,7 @@
 @media(max-width:760px){.home-showcase{grid-template-columns:1fr;gap:20px}.home-devices{aspect-ratio:2.2}.home-web-preview{padding:16px}.capability-grid{grid-template-columns:1fr}.capability-card{padding:24px}}
 
 .kpi-context{margin:12px 0 0;font-size:12px;line-height:1.6;color:var(--muted);max-width:60ch}
+
+.about-portrait{width:100%;max-width:280px;margin:28px 0 0}
+.about-portrait img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px}
+@media(max-width:900px){.about-portrait{max-width:240px}}
