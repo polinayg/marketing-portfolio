@@ -157,10 +157,26 @@ def redesign_comparison(c):
                       for title, body in c["changes"])
     badge_label = c.get("badge", "Homepage redesign")
     heading = c.get("heading", c["name"])
+    context = ""
+    if c.get("role") and c.get("why"):
+        context = (f'<div class="redesign-context"><div><h4>My contribution</h4><p>{E(c["role"])}</p></div>'
+                   f'<div><h4>Why I changed it</h4><p>{E(c["why"])}</p></div></div>')
+    mobile = ""
+    if c.get("mobile"):
+        m = c["mobile"]
+        w, h = dims(m["preview"])
+        mobile = (f'<section class="mobile-example" aria-labelledby="{c["id"]}-mobile">'
+                  f'<div><span class="badge">Mobile homepage</span><h4 id="{c["id"]}-mobile">The same brand, on a smaller screen.</h4>'
+                  f'<p>{E(m["description"])}</p><p class="small">Scroll within the preview to explore the full mobile page.</p>'
+                  f'<p class="capture-links"><a href="{m["pdf"]}" target="_blank" rel="noopener">Open mobile PDF ↗</a>'
+                  f'<a href="{m["pdf"]}" download>Download mobile PDF ↓</a></p></div>'
+                  f'<div class="mobile-device"><div class="mobile-capture" tabindex="0" role="region" aria-label="{E(c["name"])} mobile homepage, scroll to explore">'
+                  f'<img src="{m["preview"]}" width="{w}" height="{h}" alt="{E(c["name"])} redesigned homepage on mobile, full-page PDF preview" loading="lazy" decoding="async">'
+                  f'</div></div></section>')
     return (f'<section class="set comparison-pdf" aria-labelledby="{c["id"]}"><div class="set-head"><div>'
             f'<div class="badges"><span class="badge">{badge_label} · Before &amp; after</span></div>'
             f'<h3 id="{c["id"]}">{E(heading)}</h3><p>{E(c["summary"])}</p></div></div>'
-            f'<div class="comparison-grid">{"".join(figures)}</div><div class="reel-cards comparison-notes">{changes}</div>{detail}</section>')
+            f'{context}<div class="comparison-grid">{"".join(figures)}</div><div class="reel-cards comparison-notes">{changes}</div>{mobile}{detail}</section>')
 
 def case_page(p, nxt):
     chapters = [("challenge", "Challenge"), ("strategy", "Strategy"), ("role", "My Role"),
@@ -181,6 +197,10 @@ def case_page(p, nxt):
                         f'<h3 id="{example["id"]}">{E(example["title"])}</h3><p>{E(example["source"])}</p>'
                         f'</div></div><div class="reel-cards">{cards}</div></section>')
     comparisons = "".join(redesign_comparison(c) for c in p.get("comparisons", []))
+    comparison_nav = ""
+    if p.get("comparisons"):
+        links = "".join(f'<li><a href="#{E(c["id"])}">{E(c.get("heading", c["name"]))}</a></li>' for c in p["comparisons"])
+        comparison_nav = f'<nav class="comparison-nav" aria-label="Browse redesign comparisons"><p>Explore the redesigns</p><ul>{links}</ul></nav>'
     work_heading = p.get("work_heading", "See the <em>creative.</em>")
     work_intro = p.get("work_intro", "Tap any slide to view it full size. Use arrow keys or swipe to move through a carousel.")
     hero_stack = ""
@@ -208,7 +228,7 @@ def case_page(p, nxt):
 <section class="work" id="work-{p['slug']}" style="--accent:{p['brand']['accent_on_paper']}"><div class="wrap">
 <div class="eyebrow">The Work</div><h2>{work_heading}</h2>
 <p class="lede" style="margin-top:18px">{E(work_intro)}</p>
-{"".join(examples)}{p.get("work_feature", "")}{comparisons}{sets}
+{comparison_nav}{"".join(examples)}{p.get("work_feature", "")}{comparisons}{sets}
 {reels_block(p)}
 </div></section>
 <div class="wrap"><a class="next-proj" href="{nxt['file']}"><div class="eyebrow">Next case study</div><h2>{E(nxt['name'])} <span aria-hidden="true">→</span></h2></a></div>

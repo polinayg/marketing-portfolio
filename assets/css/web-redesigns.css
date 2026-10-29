@@ -22,3 +22,22 @@
 .comparison-pdf .capture-scroll,.comparison-pdf .comparison-before .capture-scroll{height:620px;max-width:none}
 .comparison-pdf .capture-scroll img{width:100%;max-width:100%}
 @media(max-width:640px){.comparison-pdf .comparison-grid{grid-template-columns:1fr}.comparison-pdf .capture-scroll,.comparison-pdf .comparison-before .capture-scroll{height:480px}}
+
+/* Context makes each comparison useful without reading the full case study. */
+.comparison-nav{margin:32px 0 44px;padding:24px;border:1px solid var(--line);border-radius:var(--r)}
+.comparison-nav>p{margin:0 0 14px;font-weight:600}
+.comparison-nav ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;margin:0;padding:0;list-style:none}
+.comparison-nav a{display:block;padding:8px 0;text-underline-offset:4px}
+.redesign-context{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;margin:0 0 28px;padding:24px;background:var(--paper-2,#eeeadf);border-radius:var(--r)}
+.redesign-context h4{margin:0 0 8px;font-size:15px;font-weight:600}
+.redesign-context p{margin:0;color:var(--ink-2);font-size:15px;line-height:1.65}
+.comparison-pdf{scroll-margin-top:100px}
+@media(max-width:640px){.comparison-nav ul,.redesign-context{grid-template-columns:1fr}.redesign-context{gap:20px;padding:20px}.comparison-nav{padding:20px}}
+.mobile-example{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,360px);gap:48px;align-items:center;margin:40px 0;padding:32px;border:1px solid var(--line);border-radius:var(--r)}
+.mobile-example h4{font:400 clamp(26px,3vw,38px)/1.2 var(--serif);margin:16px 0}
+.mobile-example p{color:var(--ink-2);max-width:48ch}
+.mobile-device{width:100%;max-width:320px;margin-inline:auto;padding:10px;background:#173b3c;border-radius:30px;box-shadow:0 12px 28px #173b3c14}
+.mobile-capture{height:570px;overflow:auto;border-radius:21px;background:white;overscroll-behavior:contain;scrollbar-width:thin}
+.mobile-capture img{display:block;width:100%;height:auto}
+.mobile-capture:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+@media(max-width:640px){.mobile-example{grid-template-columns:1fr;gap:24px;padding:20px}.mobile-capture{height:510px}}
