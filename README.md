@@ -3,7 +3,7 @@
 Live site: https://polinayg.github.io/marketing-portfolio/
 
 A static, dependency-free portfolio for GitHub Pages: home (selected work, analytics, about, contact),
-five case studies (Axe & Kindle, NxtDib, Equipio, Every Window, Levo Aero) plus Analytics & Reporting and Email Marketing capability studies, and a filterable creative gallery
+five case studies (Axe & Kindle, NxtDib, Equipio, Every Window, Levo Aero) plus Analytics & Reporting, Email Marketing and Paid Advertising capability studies, and a filterable creative gallery
 with a keyboard/swipe lightbox.
 
 ## Structure
@@ -29,7 +29,8 @@ Add a set to the project's `sets` list in `tools/content.py`, rebuild.
 
 ## Data integrity
 Homepage social metrics come from the Sprout Social “Post Performance (NXT)” export, Sept 17, 2025 – Oct 26, 2026.
-Capability studies separately cite the historical analytics presentation shown in `assets/img/analytics/`.
+Analytics and Email capability studies separately cite the historical analytics presentation shown in `assets/img/analytics/`.
+Paid Advertising summarizes October 2026 audits and a growth plan, explicitly distinguishing recommendations from implementation and measured impact. It omits internal spend/revenue and uses existing Levo artwork labeled as concepts. `work_examples` provides native HTML finding/action/measurement summaries; `next_case` can preserve an existing navigation destination.
 Email figures describe program-level observations; 2025 is an interim snapshot. No attributable email revenue or conversion lift is claimed.
 The analytics study labels approximate follower gains as ad-assisted and omits company revenue. Curated third-party Reels are labeled and linked, never embedded as original work.
 

@@ -137,6 +137,16 @@ def case_page(p, nxt):
     sets = "".join(slideset(p, s, i) for i, s in enumerate(p.get("sets", [])))
     if not p.get("sets"):
         sets = f'<div class="callout">{p.get("pending_note","")}</div>'
+    examples = []
+    for example in p.get("work_examples", []):
+        cards = "".join(f'<article class="reel"><h4>{label}</h4><p>{E(example[key])}</p></article>'
+                        for key, label in [("finding", "Finding"), ("action", "Recommended action"), ("measure", "How to measure")])
+        examples.append(f'<section class="set" aria-labelledby="{example["id"]}"><div class="set-head"><div>'
+                        f'<div class="badges"><span class="badge">Analysis &amp; proposed next steps</span></div>'
+                        f'<h3 id="{example["id"]}">{E(example["title"])}</h3><p>{E(example["source"])}</p>'
+                        f'</div></div><div class="reel-cards">{cards}</div></section>')
+    work_heading = p.get("work_heading", "See the <em>creative.</em>")
+    work_intro = p.get("work_intro", "Tap any slide to view it full size. Use arrow keys or swipe to move through a carousel.")
     hero_stack = ""
     if p.get("cover"):
         wcls = ' wide-stack' if p.get("cover_wide") else ''
@@ -160,9 +170,9 @@ def case_page(p, nxt):
 {"".join(body)}
 </div>
 <section class="work" id="work-{p['slug']}" style="--accent:{p['brand']['accent_on_paper']}"><div class="wrap">
-<div class="eyebrow">The Work</div><h2>See the <em>creative.</em></h2>
-<p class="lede" style="margin-top:18px">Tap any slide to view it full size. Use arrow keys or swipe to move through a carousel.</p>
-{sets}
+<div class="eyebrow">The Work</div><h2>{work_heading}</h2>
+<p class="lede" style="margin-top:18px">{E(work_intro)}</p>
+{"".join(examples)}{sets}
 {reels_block(p)}
 </div></section>
 <div class="wrap"><a class="next-proj" href="{nxt['file']}"><div class="eyebrow">Next case study</div><h2>{E(nxt['name'])} <span aria-hidden="true">→</span></h2></a></div>
@@ -238,7 +248,7 @@ def home():
 <figure class="chart" style="margin:0"><h3>What earns attention</h3><p class="sub">Average engagements per post by format. Reels here are mostly curated third-party clips — a sourcing insight, not a claim about my own video.</p>{bars(A['by_format'], 35, "{:.1f}")}</figure>
 </div>
 <p class="source">{A['note']}</p>
-<div class="btn-row"><a class="btn" style="background:var(--lime);color:var(--green);border-color:var(--lime)" href="analytics-reporting.html">Analytics &amp; Reporting case study →</a><a class="btn ghost" style="color:#eef0e4;border-color:#6d806f" href="email-marketing.html">Email Marketing case study →</a></div>
+<div class="btn-row"><a class="btn" style="background:var(--lime);color:var(--green);border-color:var(--lime)" href="analytics-reporting.html">Analytics &amp; Reporting case study →</a><a class="btn ghost" style="color:#eef0e4;border-color:#6d806f" href="email-marketing.html">Email Marketing case study →</a><a class="btn ghost" style="color:#eef0e4;border-color:#6d806f" href="paid-advertising.html">Paid Advertising case study →</a></div>
 </div></section>
 
 <section class="section" id="about"><div class="wrap split">
@@ -315,7 +325,9 @@ if __name__ == "__main__":
     # Preserve the five-brand next-study loop; give capabilities their own loop.
     for group in (C.PROJECTS, C.CAPABILITIES):
         for i, p in enumerate(group):
-            write(p["file"], case_page(p, group[(i + 1) % len(group)]))
+            nxt = next((candidate for candidate in ps if candidate["slug"] == p.get("next_case")),
+                       group[(i + 1) % len(group)])
+            write(p["file"], case_page(p, nxt))
     urls = [""] + ["gallery.html"] + [p["file"] for p in ps]
     sm = "".join(f"<url><loc>{SITE}{u}</loc><lastmod>{C.DATE}</lastmod></url>" for u in urls)
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')

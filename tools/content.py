@@ -660,8 +660,62 @@ ANALYTICS_CS = {
     ],
 }
 
+PAID_ADS_CS = {
+    "slug": "paid-advertising", "file": "paid-advertising.html", "name": "Paid Advertising",
+    "kicker": "Capability · Paid media analysis & strategy",
+    "meta": "Paid advertising case study: Polina Gaydamachenko's Google Ads audits, campaign analysis and acquisition planning for Axe & Kindle, Every Window and Levo Aero. Recommendations distinguished from measured results.",
+    "brand": {"bg": "#182d40", "ink": "#eff4f7", "accent": "#a8d8dd", "accent_on_paper": "#2c6170"},
+    "headline": "Better decisions <em>before</em> more spend.",
+    "lede": "I reviewed paid-search performance for Axe &amp; Kindle and Every Window, then developed a paid-acquisition plan for Levo Aero. The work connects measurement, search intent, landing pages and campaign priorities.",
+    "facts": [("Role", "Audit, analysis &amp; recommendations"),
+              ("Channels", "Google Ads · Proposed LinkedIn &amp; remarketing"),
+              ("Inputs", "Google Ads · GA4 reports · Website review"),
+              ("Period", "October 2026")],
+    "cover_wide": True, "cover_folder": "levo",
+    "cover": [("levo-li-ad-01", "Existing Levo LinkedIn ad concept, not a live campaign result"),
+              ("levo-li-ad-02", "Second Levo LinkedIn ad concept, not a live campaign result"),
+              ("levo-lp-01", "Existing Levo landing-page hero concept")],
+    "cs": {
+        "challenge": {"h": "A performance report needs <em>context.</em>",
+            "body": """<p>These brands had different paid-media questions. Axe &amp; Kindle needed a review of account measurement and campaign efficiency. Every Window needed to connect campaign reports with its store and configurator funnel. Levo needed an acquisition plan and a clear set of launch prerequisites.</p><p>The shared challenge: decide what to fix or test before committing more media spend.</p>"""},
+        "strategy": {"h": "Measurement, intent, <em>then investment.</em>",
+            "body": """<ul><li><strong>Check the signal:</strong> review conversion definitions and value reporting before drawing conclusions about efficiency.</li><li><strong>Separate intent:</strong> distinguish branded, product, research and business-buyer searches.</li><li><strong>Follow the click:</strong> connect the ad message to a relevant product, configurator, quote or demo path.</li><li><strong>Make recommendations testable:</strong> specify the next action, required access and KPI for each priority.</li></ul>"""},
+        "role": {"h": "Account review, reporting analysis, <em>launch planning.</em>",
+            "body": """<ul><li><strong>Axe &amp; Kindle:</strong> conducted a view-only Google Ads audit covering tracking, campaign allocation, search terms, copy, landing pages and a proposed B2B lead campaign.</li><li><strong>Every Window:</strong> analyzed the GA4/Data Studio sales report and monthly performance sheet. I did not have direct Google Ads account access; search terms, bidding settings and conversion configuration remained items to verify.</li><li><strong>Levo Aero:</strong> reviewed the website and product materials, defined audience-specific campaign ideas and drafted a phased acquisition plan with measurement dependencies.</li></ul>"""},
+        "execution": {"h": "Three brands, <em>different next steps.</em>",
+            "body": """<ul><li><strong>Axe &amp; Kindle:</strong> prioritized conversion-value validation and purchase/lead tracking, then recommended reviewing campaign allocation, search intent and product-page clarity.</li><li><strong>Every Window:</strong> flagged inconsistent conversion counts across reporting systems, recommended investigating branded-search efficiency and identified quote tracking and cart recovery as opportunities.</li><li><strong>Levo Aero:</strong> proposed starting with operator and broker intent on Google Search, supported by LinkedIn and remarketing once tracking and conversion paths were ready. Traveler acquisition was a later, limited test.</li></ul>"""},
+        "results": {"h": "Delivered recommendations. <em>Impact to be measured.</em>",
+            "body": """<p>The deliverables were an account audit, a reporting-based campaign analysis and a paid-acquisition growth plan. Each identified priorities, dependencies and measures for evaluating the next step.</p><div class="callout"><b>Status at the time of these documents:</b> the Axe &amp; Kindle review was view-only, Every Window recommendations required account access and approval, and Levo was a proposed launch plan. These documents do not establish implementation or post-change results. No revenue lift, ROAS improvement, cost reduction or lead growth is claimed.</div><p class="small">Sources: my Axe &amp; Kindle Google Ads Audit (Oct 26, 2026; account period Sep 26–Oct 25); Every Window Google Ads Analysis (Oct 28, 2026; campaign period Sep 28–Oct 27, with separate funnel and monthly comparison periods); Levo Paid Ads Growth Plan (website review dated Oct 28, 2026). Historical findings describe those reviews, not the current state of the accounts or websites.</p>"""},
+        "takeaways": {"h": "What I would <em>validate next.</em>",
+            "body": """<ol class="takeaways"><li>Confirm that purchase, quote and lead events mean the same thing across the reports used to make decisions.</li><li>Review search terms and landing-page intent before treating a campaign label as evidence of buyer quality.</li><li>Use qualified leads and completed purchases to evaluate a test; do not substitute clicks for business outcomes.</li><li>Record a baseline, implement approved changes and compare equivalent periods before attributing an improvement.</li></ol>"""},
+    },
+    "work_heading": "From finding to <em>next action.</em>",
+    "work_intro": "Portfolio summaries of my October 2026 recommendations, followed by existing Levo creative concepts. These are examples of analysis and planning, not a record of campaign improvements.",
+    "work_examples": [
+        {"id": "ak-measurement", "title": "Axe & Kindle · Validate the signal",
+         "source": "Google Ads account audit · View-only · Oct 26, 2026",
+         "finding": "Conversion-value adjustments and purchase-tracking warnings made reported efficiency a priority to validate. Business inquiries also needed a defined lead conversion.",
+         "action": "Confirm whether value adjustments are intentional, review purchase event data and add contact-form lead measurement before testing a business-buyer campaign.",
+         "measure": "Validated purchase values and event counts; successful test lead submissions; purchase efficiency and cost per qualified inquiry after approved changes."},
+        {"id": "ew-intent", "title": "Every Window · Connect intent to the funnel",
+         "source": "GA4/Data Studio report + monthly comparison sheet · Oct 28, 2026",
+         "finding": "Campaign efficiency varied, while Google Ads, GA4 and store reports showed different conversion counts. Quote and configurator activity needed clearer measurement.",
+         "action": "Request account access to inspect branded search, search terms and conversion settings; review lower-efficiency campaigns; connect quote, call and cart-recovery paths to reporting.",
+         "measure": "Reconciled conversion definitions; branded CPC and conversion efficiency; qualified quotes and calls; cart-to-order rate. Account-level recommendations remain subject to verification."},
+        {"id": "levo-launch", "title": "Levo Aero · Build a measurable launch",
+         "source": "Paid Ads Growth Plan · Proposed strategy · Oct 28, 2026",
+         "finding": "Operators, brokers and travelers needed different messages and conversion paths. The plan identified measurement and website prerequisites before a paid launch.",
+         "action": "Validate tracking and sign-up/demo paths, research keyword demand, then test operator and broker Search campaigns with LinkedIn support. Introduce remarketing when its prerequisites are met.",
+         "measure": "Qualified operator demo requests, broker sign-ups, landing-page conversion rate and cost per qualified lead. Establish baselines from actual campaign data before setting performance targets."},
+    ],
+    "sets": [dict(LEVO["sets"][1], title="Levo LinkedIn creative concepts", status="Ad concept · Not campaign results",
+                  desc="Existing portfolio creative for Levo. Shown as design examples alongside the proposed acquisition strategy; these concepts do not demonstrate that a campaign launched or produced results.")],
+}
+
 # Keep brand navigation, homepage cards and gallery stable. Capability pages
 # are reached from the homepage analytics section and built with the same template.
 PROJECTS = [AK, NX, EQ, EW, LEVO]
-CAPABILITIES = [EMAIL_CS, ANALYTICS_CS]
+# Retain the published capability navigation while making the new study discoverable.
+ANALYTICS_CS["next_case"] = "email-marketing"
+CAPABILITIES = [EMAIL_CS, ANALYTICS_CS, PAID_ADS_CS]
 CASE_STUDIES = PROJECTS + CAPABILITIES
