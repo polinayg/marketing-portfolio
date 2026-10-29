@@ -139,7 +139,8 @@ def case_page(p, nxt):
         sets = f'<div class="callout">{p.get("pending_note","")}</div>'
     hero_stack = ""
     if p.get("cover"):
-        hero_stack = '<div class="stack cs-stack">' + "".join(picture(p["cover_folder"], n, a, "(max-width:900px) 30vw, 200px", eager=True) for n, a in p["cover"]) + '</div>'
+        wcls = ' wide-stack' if p.get("cover_wide") else ''
+        hero_stack = f'<div class="stack cs-stack{wcls}">' + "".join(picture(p["cover_folder"], n, a, "(max-width:900px) 30vw, 200px", eager=True) for n, a in p["cover"]) + '</div>'
     facts = "".join(f'<div><dt>{E(a)}</dt><dd>{b}</dd></div>' for a, b in p["facts"])
     out = head(f'{p["name"]} — Case Study | Polina Gaydamachenko', p["meta"], p["file"])
     out += header("work")
@@ -159,7 +160,7 @@ def case_page(p, nxt):
 {"".join(body)}
 </div>
 <section class="work" id="work-{p['slug']}" style="--accent:{p['brand']['accent_on_paper']}"><div class="wrap">
-<div class="eyebrow">The Work</div><h2>See the <em>creative.</em></h2>
+<div class="eyebrow">The Work</div><h2>See the <em>work.</em></h2>
 <p class="lede" style="margin-top:18px">Tap any slide to view it full size. Use arrow keys or swipe to move through a carousel.</p>
 {sets}
 {reels_block(p)}
@@ -190,7 +191,7 @@ def home():
     for i, p in enumerate(C.PROJECTS, 1):
         if p.get("cover"):
             imgs = "".join(picture(p["cover_folder"], n, a, "(max-width:900px) 30vw, 230px") for n, a in p["cover"])
-            media = f'<div class="stack">{imgs}</div>'
+            media = f'<div class="stack{" wide-stack" if p.get("cover_wide") else ""}">{imgs}</div>'
         else:
             media = f'<div class="pending"><div><strong>{E(p["name"])}</strong><span>{E(p.get("cover_label","Case study"))}</span></div></div>'
         kpis = "".join(f'<div><b>{v}</b><span>{E(l)}</span></div>' for v, l in p.get("kpis", []))
@@ -215,14 +216,14 @@ def home():
 <div><dt>Focus</dt><dd>Social &amp; content strategy</dd></div>
 <div><dt>Brands</dt><dd>5 across B2C &amp; B2B</dd></div>
 <div><dt>Published (Sprout)</dt><dd>419 Instagram feed posts</dd></div>
-<div><dt>Toolkit</dt><dd>Canva · Buffer · Sprout · Drip · AI</dd></div>
+<div><dt>Toolkit</dt><dd>Canva · Buffer · Drip · GA4 · Sprout</dd></div>
 </dl></div>
 <div class="mosaic" aria-label="A sample of original campaign designs">{mosaic}</div>
 </div></section>
 <div class="wrap"><p class="ticker" aria-label="Brands featured"><span>Axe &amp; Kindle</span><span>NxtDib</span><span>Equipio</span><span>Every Window</span><span>Levo Aero</span></p></div>
 
 <section class="section" id="work"><div class="wrap">
-<div class="split"><div><div class="eyebrow">01 — Selected Work</div><h2>Five brands. <em>One</em> standard.</h2></div>
+<div class="split"><div><div class="eyebrow">01 — Selected Work</div><h2>Five brands. <em>Every</em> channel.</h2></div>
 <p class="lede">Each case study follows the same structure — challenge, strategy, my role, execution, results and takeaways — and shows the actual campaign creative. Brand colors belong to the brands; the analysis is mine.</p></div>
 <div class="projects">{"".join(projects)}</div>
 <div class="btn-row" style="margin-top:70px"><a class="btn" href="gallery.html">Open the full creative gallery →</a></div>
@@ -237,6 +238,7 @@ def home():
 <figure class="chart" style="margin:0"><h3>What earns attention</h3><p class="sub">Average engagements per post by format. Reels here are mostly curated third-party clips — a sourcing insight, not a claim about my own video.</p>{bars(A['by_format'], 35, "{:.1f}")}</figure>
 </div>
 <p class="source">{A['note']}</p>
+<div class="btn-row"><a class="btn" style="background:var(--lime);color:var(--green);border-color:var(--lime)" href="analytics-reporting.html">Analytics &amp; Reporting case study →</a><a class="btn ghost" style="color:#eef0e4;border-color:#6d806f" href="email-marketing.html">Email Marketing case study →</a></div>
 </div></section>
 
 <section class="section" id="about"><div class="wrap split">

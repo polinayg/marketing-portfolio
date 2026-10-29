@@ -32,7 +32,7 @@ ANALYTICS = {
              "accounts, Sept 17, 2025 – Oct 26, 2026 (421 rows; 2 Stories excluded). All 419 feed posts list "
              "“Polina Gaydamachenko” as sender. Figures are sums of post-level interactions, not unique people. "
              "The export contains no revenue, conversion, booking or follower-growth data, so none is claimed. "
-             "Every Window and Levo Aero are not in this export."),
+             "Every Window and Levo Aero are not in this export. See the Email Marketing and Analytics &amp; Reporting case studies for Drip, GA4 and Search Console work."),
 }
 
 ABOUT = """<p class="lede">I'm a one-person marketing team at NXT Companies, a vertical-AI venture studio, where I run marketing across its brands — B2C and B2B, products and marketplaces.</p>
@@ -41,9 +41,9 @@ ABOUT = """<p class="lede">I'm a one-person marketing team at NXT Companies, a v
 <ul class="about-list">
 <li>Social strategy &amp; content calendars</li><li>Carousel &amp; static design (Canva)</li>
 <li>Copywriting, captions &amp; CTAs</li><li>Email campaigns (Drip)</li>
-<li>Scheduling &amp; publishing (Buffer)</li><li>Analytics (Sprout Social)</li>
+<li>Scheduling &amp; publishing (Buffer)</li><li>Analytics (GA4, Search Console, Sprout)</li>
 <li>Creator content sourcing &amp; credit</li><li>Landing pages &amp; CMS updates</li>
-<li>AI-assisted production</li><li>Instagram · Facebook · LinkedIn</li>
+<li>Google Ads &amp; paid social</li><li>AI-assisted production</li>
 </ul>"""
 
 # Hero mosaic: (link, folder, image, alt, aria-label)
@@ -520,4 +520,148 @@ LEVO = {
     ],
 }
 
-PROJECTS = [AK, NX, EQ, EW, LEVO]
+EMAIL_CS = {
+    "slug": "email-marketing", "file": "email-marketing.html", "name": "Email Marketing",
+    "kicker": "Capability · Email (Drip)",
+    "meta": "Email marketing case study: Polina Gaydamachenko's Axe & Kindle email program in Drip — seasonal campaigns, a 69-design header library and verified list-health metrics.",
+    "brand": {"bg": "#2a2118", "ink": "#f4ecdf", "accent": "#d9b36c", "accent_on_paper": "#8a5a1f"},
+    "headline": "A weekly reason to <em>light a fire.</em>",
+    "lede": "I run Axe &amp; Kindle's email program in Drip: the calendar, subject lines, copy, header design, sending and reporting — for a list of roughly 12,400 subscribers.",
+    "facts": [("Role", "Email marketer (end to end)"), ("Platform", "Drip"),
+              ("Tools", "Drip · Canva · GA4"), ("Period shown", "Oct 2025 – Oct 2026")],
+    "card_title": "A weekly reason to <em>light a fire.</em>",
+    "card_text": "Seasonal email campaigns for a ~12,400-subscriber list — planned, written, designed and sent in Drip, with honest reporting on what the numbers show.",
+    "kpis": [("39", "Campaigns / 12 mo"), ("494K", "Emails sent"), ("0.05%", "Unsubscribe rate")],
+    "chips": ["Drip", "Campaign calendar", "Subject lines", "Email design"],
+    "cover_folder": "ak-email", "cover": [("email-47", "Axe & Kindle email header: “Winter starts with the right firewood”"),
+                                           ("email-42", "Axe & Kindle email header: “Halloween nights need firewood that lasts”"),
+                                           ("email-36", "Axe & Kindle email header: “Perfectly smoked meats start with hickory firewood”")],
+    "cs": {
+        "challenge": {"h": "A seasonal product, a <em>year-round</em> list.",
+            "body": """<p>Firewood demand spikes with the weather, but the email list doesn't take the summer off. The program needed a steady, recognizable cadence that stays relevant in every season — cook-outs, holidays, the first cold night — without wearing the list out.</p>"""},
+        "strategy": {"h": "Timely moments, one clear <em>ask.</em>",
+            "body": """<ul>
+<li><strong>Calendar-driven subject lines</strong> tied to real moments: Labor Day fires, a Halloween fire-pit night, “October is one week away,” “How's the stack holding up?”</li>
+<li><strong>Two audiences:</strong> homeowners, plus a restaurant angle (“Autumn service starts soon. Is your wood supply sorted?”).</li>
+<li><strong>One CTA per email</strong> — shop or reorder kiln-dried firewood with free delivery.</li>
+<li><strong>A recognizable look:</strong> a reusable header system so every send reads as Axe &amp; Kindle at a glance.</li>
+</ul>"""},
+        "role": {"h": "Every step, <em>every send.</em>",
+            "body": """<ul><li>Plan the email calendar alongside the social calendar.</li>
+<li>Write subject lines, preheaders and body copy.</li>
+<li>Design headers and imagery in Canva (69 header designs to date).</li>
+<li>Build, schedule and send broadcasts in Drip; review results and list health.</li></ul>"""},
+        "execution": {"h": "39 campaigns in <em>12 months.</em>",
+            "body": """<ul>
+<li><strong>Cadence:</strong> 39 broadcasts between Oct 28, 2025 and Oct 28, 2026 — roughly three a month, weekly in peak season.</li>
+<li><strong>Header library:</strong> seasonal and holiday headers from National Firewood Day to Father's Day, built for fast reuse.</li>
+<li><strong>Next:</strong> a welcome series and an abandoned-cart automation are drafted in Drip.</li>
+</ul>
+<p><a href="https://www.getdrip.com/broadcasts/631762968/2c682525b755466c831aa" target="_blank" rel="noopener">View “How's the Stack Holding Up?” as sent ↗</a><br>
+<a href="https://www.getdrip.com/broadcasts/657374647/a11f7a576f2a723223879" target="_blank" rel="noopener">View “Host the Best Halloween Fire Pit Night” as sent ↗</a><br>
+<a href="https://www.getdrip.com/broadcasts/622529428/9738061e15fa277f58a6d" target="_blank" rel="noopener">View “Autumn Service Starts Soon” (restaurant angle) as sent ↗</a></p>"""},
+        "results": {"h": "A healthy list, <em>honestly</em> reported.",
+            "body": """<div class="metric-grid"><div><b>494,227</b><span>Emails sent</span></div><div><b>99.1%</b><span>Delivered</span></div><div><b>0.05%</b><span>Unsubscribe rate</span></div><div><b>0.01%</b><span>Spam complaint rate</span></div></div>
+<ul>
+<li><strong>List health is excellent:</strong> unsubscribes fell from 0.33% (2023) to 0.13% (2024) and 0.05% over the last 12 months, with hard bounces at 0.04%.</li>
+<li><strong>Engagement is the opportunity:</strong> an 8.9% open rate and 0.18% click rate overall. The best of the ten most recent sends, “How's the Stack Holding Up?”, reached an 11.2% open rate and 0.53% click rate — about three times the average click rate.</li>
+<li>Drip isn't reporting attributed orders for these sends, so no email revenue is claimed here.</li>
+</ul>
+<p class="small">Sources: Drip email metrics for broadcasts sent Oct 28, 2025 – Oct 28, 2026 (39 broadcasts); 2023–2024 unsubscribe rates from my analytics presentation (Drip data).</p>"""},
+        "takeaways": {"h": "What I'd carry <em>forward.</em>",
+            "body": """<ol class="takeaways">
+<li>Timely, specific subject lines (“How's the stack holding up?”) beat generic promotions.</li>
+<li>Consistent cadence and relevant content kept unsubscribes very low even at weekly volume.</li>
+<li>Next step: segmentation and automation — welcome, cart-recovery and re-engagement flows — to lift clicks and tie email to orders.</li>
+</ol>"""},
+    },
+    "sets": [
+        {"folder": "ak-email", "title": "Email header library", "format": "Email headers · 12 of 69", "square": True, "gallery_take": 0,
+         "desc": "A year of seasonal and holiday headers designed for Drip campaigns.",
+         "slides": [("email-01", "Email header: “Celebrate National Firewood Day — stock up on the best firewood!”"),
+                    ("email-05", "Email header: “Winter is here — stock up on premium firewood”"),
+                    ("email-09", "Email header: “Happy Thanksgiving from Axe & Kindle!”"),
+                    ("email-12", "Email header: Valentine's Day — “Turn up the romance”"),
+                    ("email-19", "Email header: “Maximize your firewood's performance with premium kiln-dried wood!”"),
+                    ("email-24", "Email header: “Elevate every fire: why chefs and homeowners choose kiln-dried wood”"),
+                    ("email-30", "Email header: “See why kitchens and campfires alike rely on Axe & Kindle”"),
+                    ("email-36", "Email header: “Perfectly smoked meats start with hickory firewood”"),
+                    ("email-42", "Email header: “Halloween nights need firewood that lasts”"),
+                    ("email-47", "Email header: “Winter starts with the right firewood”"),
+                    ("email-52", "Email header: “Oak. Hickory. Mixed hardwood… here's how to choose.”"),
+                    ("email-64", "Email header: “There's a flavor your grill has been missing”")]},
+        {"folder": "analytics", "title": "Email analytics, 2023–2025", "format": "Reporting slide", "ratio": "16/9", "wide": True, "gallery_take": 0,
+         "desc": "From my analytics presentation: sends, open rate, click rate, unsubscribes and bounces by year.",
+         "slides": [("deck-14", "Email analytics slide: sends, open rate, CTR, unsubscribe and bounce rate for 2023, 2024 and 2025")]},
+    ],
+}
+
+ANALYTICS_CS = {
+    "slug": "analytics-reporting", "file": "analytics-reporting.html", "name": "Analytics & Reporting",
+    "kicker": "Capability · GA4 · Search Console · Social",
+    "meta": "Analytics case study: Polina Gaydamachenko's cross-channel analysis for Axe & Kindle and Every Window using GA4, Google Search Console, Instagram Insights and Drip, with strategic recommendations.",
+    "brand": {"bg": "#1f2e24", "ink": "#eef0e4", "accent": "#d9e58e", "accent_on_paper": "#4d6b22"},
+    "headline": "Turning four data sources into <em>one story.</em>",
+    "lede": "I built a 32-slide analytics review for Axe &amp; Kindle and Every Window — GA4, Google Search Console, Instagram Insights and Drip — and turned it into channel priorities for 2025.",
+    "facts": [("Role", "Analyst &amp; author"), ("Sources", "GA4 · Search Console · Instagram Insights · Drip"),
+              ("Deliverable", "32-slide deck + roadmap docs"), ("Date", "March–April 2025")],
+    "card_title": "Turning four data sources into <em>one story.</em>",
+    "card_text": "A cross-channel review of traffic, engagement, search, social and email for two brands — ending in clear, prioritized recommendations.",
+    "kpis": [("4", "Data sources"), ("2", "Brands"), ("32", "Slides")],
+    "chips": ["GA4", "Search Console", "Instagram Insights", "Channel strategy"],
+    "cover_wide": True, "cover_folder": "analytics", "cover": [("deck-03", "Analytics slide: Axe & Kindle social media performance"),
+                                            ("deck-15", "Analytics slide: engagement rate trends by channel"),
+                                            ("deck-17", "Analytics slide: strategic recommendations for 2025")],
+    "cs": {
+        "challenge": {"h": "Lots of data, <em>no single picture.</em>",
+            "body": """<p>Traffic, social, search and email data for Axe &amp; Kindle and Every Window lived in different tools. Leadership needed one view of what had changed since 2022, which channels were pulling their weight, and where to focus next.</p>"""},
+        "strategy": {"h": "Same framework for <em>both brands.</em>",
+            "body": """<ul>
+<li><strong>One structure, two brands:</strong> audience → social performance → GA4 acquisition → organic search → Search Console → email → engagement → channel efficiency → recommendations.</li>
+<li><strong>Quality over volume:</strong> look at engagement rate and revenue per channel, not just sessions.</li>
+<li><strong>Call out measurement gaps:</strong> explain what GA4 can misattribute (untagged ads, dark social) so decisions aren't built on bad data.</li>
+</ul>"""},
+        "role": {"h": "Pulled it, analyzed it, <em>presented it.</em>",
+            "body": """<ul><li>Pulled and reconciled data from GA4, Google Search Console, Instagram Insights and Drip for 2022–2025.</li>
+<li>Designed the 32-slide presentation in Canva and wrote every takeaway.</li>
+<li>Wrote supporting strategy documents, including a quarter-by-quarter roadmap.</li></ul>"""},
+        "execution": {"h": "Findings that <em>drive decisions.</em>",
+            "body": """<ul>
+<li><strong>Engagement quality rose across channels:</strong> for Axe &amp; Kindle, organic engagement rate went from 20.8% to 47.2% and paid from 10.9% to 69.8% between 2022 and 2025.</li>
+<li><strong>Channel roles became clear:</strong> organic search was the most efficient long-term channel, paid search a high-volume driver needing tighter ROI tracking, and email small but with best-in-class engagement.</li>
+<li><strong>Social reach was ad-assisted:</strong> Instagram Insights showed most recent views came from ads (79% for Axe &amp; Kindle, 98% for Every Window) — an honest read on what organic content was and wasn't doing.</li>
+</ul>"""},
+        "results": {"h": "What the review <em>showed.</em>",
+            "body": """<div class="metric-grid"><div><b>~13,000</b><span>Axe &amp; Kindle Instagram followers gained (ad-assisted)</span></div><div><b>~1,200</b><span>Every Window followers gained (ad-assisted)</span></div><div><b>123,607</b><span>A&amp;K accounts reached, 90 days (+15.6%)</span></div><div><b>106,351</b><span>EW accounts reached, 90 days</span></div></div>
+<p>Follower counts are approximate gains since I started managing each account, as reported in the deck; Instagram attributed most reach in that window to paid ads, so I present them as ad-assisted growth rather than organic. Company revenue figures from GA4 are part of the original analysis but are intentionally left off this public page.</p>
+<p class="small">Source: my “AK &amp; EW Analytics Presentation, 2022–Present” (Canva), using GA4, Google Search Console, Instagram Insights and Drip data; prepared March–April 2025.</p>"""},
+        "takeaways": {"h": "What I <em>recommended.</em>",
+            "body": """<ol class="takeaways">
+<li>Rebuild organic search: target top 2023 keywords, fix technical SEO, and strengthen category and product pages.</li>
+<li>Scale email: grow the list, segment it, and add automations (welcome, cart and browse abandonment, win-back).</li>
+<li>Measure paid search ROI: audit ROAS, trim low performers, shift to branded and bottom-funnel audiences.</li>
+<li>Improve conversion paths: scroll-depth tracking, clearer CTAs, and user testing on key pages.</li>
+</ol>"""},
+    },
+    "sets": [
+        {"folder": "analytics", "title": "Axe & Kindle review", "format": "Presentation · 8 of 17 slides", "ratio": "16/9", "wide": True,
+         "desc": "Audience, social performance, search, email, engagement trends, channel efficiency and recommendations. Revenue slides omitted.",
+         "slides": [("deck-01", "Title slide: Axe & Kindle + Every Window Analytics, 2022–Present"),
+                    ("deck-02", "Axe & Kindle social media audience: age, location and gender breakdown"),
+                    ("deck-03", "Axe & Kindle social media performance: new followers, views, accounts reached and interactions"),
+                    ("deck-13", "Google Search Console performance charts for Axe & Kindle"),
+                    ("deck-14", "Email analytics: sends, open rate, click rate, unsubscribes and bounces by year"),
+                    ("deck-15", "Engagement rate trends by channel, 2022–2025"),
+                    ("deck-16", "Channel efficiency takeaways"),
+                    ("deck-17", "Strategic recommendations for 2025")]},
+        {"folder": "analytics", "title": "Every Window review", "format": "Presentation · 5 of 15 slides", "ratio": "16/9", "wide": True,
+         "desc": "The same framework applied to Every Window, ending in a detailed 2025 roadmap. Revenue slides omitted.",
+         "slides": [("deck-18", "Every Window social media audience: age, location and gender"),
+                    ("deck-19", "Every Window social media performance since I started managing the account"),
+                    ("deck-30", "Every Window engagement rate trends by channel"),
+                    ("deck-31", "Every Window channel efficiency takeaways"),
+                    ("deck-32", "Every Window strategic recommendations for 2025: organic, paid, email and conversion paths")]},
+    ],
+}
+
+PROJECTS = [AK, NX, EQ, EW, LEVO, EMAIL_CS, ANALYTICS_CS]
