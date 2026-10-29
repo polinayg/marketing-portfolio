@@ -293,7 +293,7 @@ def home():
 <div><dt>Focus</dt><dd>Strategy + hands-on execution</dd></div>
 <div><dt>Brands</dt><dd>5 across B2C &amp; B2B</dd></div>
 <div><dt>Channels</dt><dd>Social · Email · Web · Paid</dd></div>
-<div><dt>Toolkit</dt><dd>CMS · Drip · GA4 · Google &amp; Meta Ads</dd></div>
+<div><dt>Toolkit</dt><dd>CMS · Drip · GA4 · Search Console · Google &amp; Meta Ads</dd></div>
 </dl></div>
 <div class="home-showcase"><div class="mosaic" aria-label="Original social campaign designs">{mosaic}</div>
 <a class="home-web-preview" href="website-redesigns.html" aria-label="Explore website redesigns with desktop and mobile examples">

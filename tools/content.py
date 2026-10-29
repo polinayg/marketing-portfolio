@@ -45,7 +45,17 @@ ABOUT = """<p class="lede">I'm the Multi-Brand Marketing Manager at NXT Companie
 <li>Google Ads &amp; Meta Ads</li><li>GA4 &amp; Search Console analysis</li>
 <li>Creative design (Canva)</li><li>CMS page building</li>
 <li>Reporting &amp; recommendations</li><li>AI-assisted production</li>
-</ul>"""
+</ul>
+<h3 style="margin-top:36px">My toolkit</h3>
+<ul class="about-list" aria-label="Marketing toolkit by discipline">
+<li><strong>Analytics &amp; reporting</strong><br>GA4 · Google Search Console · Looker Studio</li>
+<li><strong>Paid advertising</strong><br>Google Ads · Meta Ads Manager</li>
+<li><strong>Email &amp; CRM</strong><br>Drip · HubSpot</li>
+<li><strong>Websites</strong><br>CMS builds · WordPress · HTML/CSS</li>
+<li><strong>Creative</strong><br>Canva · Photoshop · Premiere Pro · Figma</li>
+<li><strong>Social &amp; workflow</strong><br>Sprout Social · Buffer · Monday.com</li>
+</ul>
+"""
 
 HOME_CAPABILITIES = [
     {"file": "website-redesigns.html", "title": "Website Design & Builds", "scope": "CMS · Desktop + mobile",
