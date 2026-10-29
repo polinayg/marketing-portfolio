@@ -28,7 +28,7 @@ def picture(folder, name, alt, sizes="(max-width:760px) 60vw, 300px", eager=Fals
     return (f'<img{c} src="{sm}" srcset="{sm} {w}w, {full} {W}w" sizes="{sizes}" '
             f'width="{w}" height="{h}" alt="{E(alt)}" {load} decoding="async">')
 
-def head(title, desc, path, og_img="assets/img/og-cover.jpg", extra=""):
+def head(title, desc, path, og_img="assets/img/og-cover.jpg?v=2026-10-29-manager", extra=""):
     url = SITE + path
     return f"""<!doctype html>
 <html lang="en">
@@ -45,7 +45,13 @@ def head(title, desc, path, og_img="assets/img/og-cover.jpg", extra=""):
 <meta property="og:description" content="{E(desc)}">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{SITE}{og_img}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Polina Gaydamachenko, Multi-Brand Marketing Manager. Integrated strategy, creative execution, paid ads, websites, email and analytics. Campaign examples from Axe &amp; Kindle, NxtDib and Every Window.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{SITE}{og_img}">
+<meta name="twitter:image:alt" content="Polina Gaydamachenko, Multi-Brand Marketing Manager. Integrated strategy, creative execution, paid ads, websites, email and analytics.">
 <meta name="theme-color" content="#f4f0e8">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
