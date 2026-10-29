@@ -248,11 +248,15 @@ def bars(rows, maxv, fmt="{:,}", unit=""):
 
 def home():
     A = C.ANALYTICS
-    out = head("Polina Gaydamachenko — Social Media & Content Marketing Portfolio", C.HOME_META, "")
+    out = head("Polina Gaydamachenko — Multi-Brand Marketing Manager", C.HOME_META, "", extra='<link rel="stylesheet" href="assets/css/home.css?v=2026-10-29-scope">\n')
     out += f'<script type="application/ld+json">{json.dumps(C.JSONLD)}</script>\n'
     out += header()
     mosaic = "".join(f'<a href="{f}" aria-label="{E(lbl)}">{picture(fo, n, alt, "(max-width:760px) 33vw, 200px", eager=i < 3)}</a>'
-                     for i, (f, fo, n, alt, lbl) in enumerate(C.MOSAIC))
+                     for i, (f, fo, n, alt, lbl) in enumerate(C.MOSAIC[:3]))
+    capabilities = "".join(f'<a class="capability-card" href="{c["file"]}"><span class="capability-scope">{E(c["scope"])}</span>'
+                           f'<h3>{E(c["title"])}</h3><p>{E(c["description"])}</p>'
+                           f'<span class="capability-action">{E(c["action"])} <span aria-hidden="true">↗</span></span></a>'
+                           for c in C.HOME_CAPABILITIES)
     projects = []
     for i, p in enumerate(C.PROJECTS, 1):
         if p.get("cover"):
@@ -273,20 +277,28 @@ def home():
     out += f"""<main id="main">
 <section class="hero" id="top"><div class="wrap">
 <div class="hero-grid"><div>
-<div class="eyebrow">Social media · Content marketing · Multi-brand</div>
-<h1>Content with a <em>point of view.</em></h1>
-<p class="lede" style="margin-top:28px">I'm Polina — a digital marketer who plans, designs, writes and publishes social and email content for five brands at once, from premium firewood to wholesale beverages to film-gear rentals. This is the work behind the résumé.</p>
-<div class="btn-row"><a class="btn" href="#work">View selected work ↓</a><a class="btn ghost" href="#contact">Get in touch</a><a class="btn ghost" href="{C.RESUME_FILE}" download>Download Résumé (PDF) ↓</a></div>
+<div class="eyebrow">Multi-Brand Marketing Manager</div>
+<h1>Strategy to <em>execution.</em></h1>
+<p class="lede" style="margin-top:28px">I'm Polina, a Multi-Brand Marketing Manager connecting strategy with hands-on work across social media, email, websites, paid advertising and analytics. I manage marketing for five B2C and B2B brands, adapting the message and creative to each audience.</p>
+<div class="btn-row"><a class="btn" href="#capabilities">Explore my work ↓</a><a class="btn ghost" href="#work">Browse by brand</a><a class="btn ghost" href="{C.RESUME_FILE}" download>Download Résumé (PDF) ↓</a></div>
 </div>
 <dl class="hero-meta">
-<div><dt>Focus</dt><dd>Social &amp; content strategy</dd></div>
+<div><dt>Focus</dt><dd>Strategy + hands-on execution</dd></div>
 <div><dt>Brands</dt><dd>5 across B2C &amp; B2B</dd></div>
-<div><dt>Published (Sprout)</dt><dd>419 Instagram feed posts</dd></div>
-<div><dt>Toolkit</dt><dd>Canva · Buffer · Sprout · Drip · AI</dd></div>
+<div><dt>Channels</dt><dd>Social · Email · Web · Paid</dd></div>
+<div><dt>Toolkit</dt><dd>CMS · Drip · GA4 · Google &amp; Meta Ads</dd></div>
 </dl></div>
-<div class="mosaic" aria-label="A sample of original campaign designs">{mosaic}</div>
+<div class="home-showcase"><div class="mosaic" aria-label="Original social campaign designs">{mosaic}</div>
+<a class="home-web-preview" href="website-redesigns.html" aria-label="Explore website redesigns with desktop and mobile examples">
+<div class="home-devices" aria-hidden="true"><div class="home-desktop"><div class="home-browser-bar"><span></span><span></span><span></span></div><img src="assets/img/web-redesigns/ew-home-after-pdf-preview.webp" width="1000" height="7330" alt="" loading="lazy" decoding="async"></div><div class="home-phone"><img src="assets/img/web-redesigns/ew-home-mobile-preview.webp" width="357" height="16000" alt="" loading="lazy" decoding="async"></div></div>
+<span class="home-web-label">Website design <span>Desktop + mobile ↗</span></span></a></div>
 </div></section>
 <div class="wrap"><p class="ticker" aria-label="Brands featured"><span>Axe &amp; Kindle</span><span>NxtDib</span><span>Equipio</span><span>Every Window</span><span>Levo Aero</span></p></div>
+
+<section class="section tight" id="capabilities"><div class="wrap">
+<div class="split"><div><div class="eyebrow">Capabilities</div><h2>From the plan to <em>the page.</em></h2></div><p class="lede">Explore my work by discipline, from website design and email campaigns to advertising recommendations and performance analysis.</p></div>
+<div class="capability-grid">{capabilities}</div>
+</div></section>
 
 <section class="section" id="work"><div class="wrap">
 <div class="split"><div><div class="eyebrow">01 — Selected Work</div><h2>Five brands. <em>One</em> standard.</h2></div>
@@ -297,25 +309,25 @@ def home():
 
 <section class="section dark" id="analytics"><div class="wrap">
 <div class="split"><div><div class="eyebrow">02 — Analytics</div><h2>Creative, with <em>receipts.</em></h2></div>
-<div><p class="lede">Verified from a Sprout Social Instagram post-performance export covering {A['period']}. Every post in the export lists me as the sender. Nothing here is estimated, and none of it is presented as sales, conversions or follower growth — the export doesn't measure those.</p></div></div>
+<div><p class="lede">Social content I published and analyzed across three brand accounts. Reporting period: {A['period']}. Explore the Analytics &amp; Reporting case study for my broader work across web, search, social and email.</p></div></div>
 <div class="stat-grid">{stats}</div>
 <div class="charts">
 <figure class="chart" style="margin:0"><h3>Engagements by brand</h3><p class="sub">Total post engagements, Instagram feed (likes, comments, shares, saves).</p>{bars(A['by_brand'], A['by_brand'][0][1])}</figure>
-<figure class="chart" style="margin:0"><h3>What earns attention</h3><p class="sub">Average engagements per post by format. Reels here are mostly curated third-party clips — a sourcing insight, not a claim about my own video.</p>{bars(A['by_format'], 35, "{:.1f}")}</figure>
+<figure class="chart" style="margin:0"><h3>What earns attention</h3><p class="sub">Average engagements per post by format. Reels are mostly curated third-party footage; my role was sourcing, crediting and publishing.</p>{bars(A['by_format'], 35, "{:.1f}")}</figure>
 </div>
 <p class="source">{A['note']}</p>
 <div class="btn-row"><a class="btn" style="background:var(--lime);color:var(--green);border-color:var(--lime)" href="analytics-reporting.html">Analytics &amp; Reporting case study →</a><a class="btn ghost" style="color:#eef0e4;border-color:#6d806f" href="email-marketing.html">Email Marketing case study →</a><a class="btn ghost" style="color:#eef0e4;border-color:#6d806f" href="paid-advertising.html">Paid Advertising case study →</a><a class="btn ghost" style="color:#eef0e4;border-color:#6d806f" href="website-redesigns.html">Website Design &amp; Builds case study →</a></div>
 </div></section>
 
 <section class="section" id="about"><div class="wrap split">
-<div><div class="eyebrow">03 — About</div><h2>Strategist, <em>maker,</em> publisher.</h2></div>
+<div><div class="eyebrow">03 — About</div><h2>Strategy, creative <em>and follow-through.</em></h2></div>
 <div>{C.ABOUT}</div>
 </div></section>
 
 <section class="section contact" id="contact"><div class="wrap">
 <div class="eyebrow">04 — Contact</div>
 <h2>Let's make something <em>worth saving.</em></h2>
-<p class="lede" style="color:var(--green);margin-top:22px">Open to Social Media Manager, Content Marketing Manager and Marketing Manager roles.</p>
+<p class="lede" style="color:var(--green);margin-top:22px">Open to Marketing Manager, Digital Marketing Manager, Content Marketing Manager and Social Media Manager roles.</p>
 <div class="btn-row" style="margin-top:24px"><a class="btn" href="{C.RESUME_FILE}" download>Download Résumé (PDF) ↓</a></div>
 <div class="contact-links">
 <a href="mailto:{C.EMAIL}">{C.EMAIL}<span>Email ↗</span></a>

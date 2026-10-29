@@ -10,15 +10,14 @@ EMAIL = "polinayg99@gmail.com"
 LINKEDIN = "https://www.linkedin.com/in/polina-gaydamachenko/"
 RESUME_FILE = "assets/docs/Polina_Gaydamachenko_Resume.pdf"
 
-HOME_META = ("Portfolio of Polina Gaydamachenko, a multi-brand digital marketer: social media strategy, original "
-             "carousel and email creative, and verified Sprout Social results for Axe & Kindle, NxtDib, Equipio, "
-             "Every Window and Levo Aero.")
+HOME_META = ("Portfolio of Polina Gaydamachenko, Multi-Brand Marketing Manager: social and email campaigns, "
+             "website builds and redesigns, paid advertising and analytics across five B2C and B2B brands.")
 
 JSONLD = {
     "@context": "https://schema.org", "@type": "Person", "name": "Polina Gaydamachenko",
-    "jobTitle": "Digital Marketer — Social Media & Content", "url": SITE_URL,
+    "jobTitle": "Multi-Brand Marketing Manager", "url": SITE_URL,
     "email": "mailto:" + EMAIL, "sameAs": [LINKEDIN, "https://github.com/polinayg"],
-    "knowsAbout": ["Social media marketing", "Content strategy", "Email marketing", "Canva", "Sprout Social", "Buffer"],
+    "knowsAbout": ["Marketing strategy", "Social media marketing", "Email marketing", "Website design", "Paid advertising", "Google Analytics 4", "Content strategy"],
 }
 
 ANALYTICS = {
@@ -30,23 +29,34 @@ ANALYTICS = {
     "by_brand": [("Equipio", 3685), ("Axe & Kindle", 3082), ("NxtDib", 290)],
     "by_format": [("A&K · Reels", 28.9), ("A&K · Carousels", 7.2), ("A&K · Photos", 4.9),
                   ("Equipio · Reels", 31.6), ("Equipio · Carousels", 8.5), ("Equipio · Photos", 8.9)],
-    "note": ("Source: Sprout Social “Post Performance” export for the @axeandkindle, @goequipio and @nxtdib Instagram "
-             "accounts, Sept 17, 2025 – Oct 26, 2026 (421 rows; 2 Stories excluded). All 419 feed posts list "
-             "“Polina Gaydamachenko” as sender. Figures are sums of post-level interactions, not unique people. "
-             "The export contains no revenue, conversion, booking or follower-growth data, so none is claimed. "
-             "Every Window and Levo Aero are not in this export. See the Email Marketing and Analytics &amp; Reporting case studies for Drip, GA4 and Search Console work."),
+    "note": ("Source: Sprout Social Post Performance export, Sept 17, 2025 – Oct 26, 2026: 419 Instagram feed posts "
+             "across @axeandkindle, @goequipio and @nxtdib (2 Stories excluded), all listing Polina Gaydamachenko as sender. "
+             "Totals count post-level interactions, not unique people, and include original creative and curated Reels. "
+             "Every Window and Levo Aero are outside this export. These are content metrics, not revenue, conversion or follower-growth results."),
 }
 
-ABOUT = """<p class="lede">I'm a one-person marketing team at NXT Companies, a vertical-AI venture studio, where I run marketing across its brands — B2C and B2B, products and marketplaces.</p>
-<p>My week moves between building monthly content calendars, designing carousels and statics in Canva, writing captions and calls to action, scheduling in Buffer, building email campaigns in Drip, and reading performance in Sprout Social. I adapt voice and visual system to each brand — premium-rustic for firewood, industry-savvy for wholesale beverages, technical for film crews — while keeping the same disciplined process underneath.</p>
-<p>I'm now growing into a combined Marketing + AI role: I use AI image generation and writing tools inside a human-edited production workflow to ship more content without lowering the bar.</p>
+ABOUT = """<p class="lede">I'm the Multi-Brand Marketing Manager at NXT Companies, a vertical-AI venture studio, managing marketing across five B2C and B2B brands.</p>
+<p>I connect planning with hands-on execution: social content and publishing, email campaigns in Drip, website builds and redesigns in the CMS, and Google and Meta advertising. My work spans consumer products, wholesale marketplaces, home improvement, film equipment and private aviation.</p>
+<p>I use GA4, Google Search Console and Sprout Social to understand performance and turn findings into campaign and website recommendations. I adapt the message and visual system to each audience while keeping the work consistent across channels.</p>
+<p>AI image generation and writing tools are part of my production workflow, with my editing, design decisions and brand review guiding the final work.</p>
 <ul class="about-list">
-<li>Social strategy &amp; content calendars</li><li>Carousel &amp; static design (Canva)</li>
-<li>Copywriting, captions &amp; CTAs</li><li>Email campaigns (Drip)</li>
-<li>Scheduling &amp; publishing (Buffer)</li><li>Analytics (Sprout Social)</li>
-<li>Creator content sourcing &amp; credit</li><li>Landing pages &amp; CMS updates</li>
-<li>AI-assisted production</li><li>Instagram · Facebook · LinkedIn</li>
+<li>Multi-brand marketing strategy</li><li>Social content &amp; publishing</li>
+<li>Email campaigns &amp; copywriting</li><li>Website builds &amp; redesigns</li>
+<li>Google Ads &amp; Meta Ads</li><li>GA4 &amp; Search Console analysis</li>
+<li>Creative design (Canva)</li><li>CMS page building</li>
+<li>Reporting &amp; recommendations</li><li>AI-assisted production</li>
 </ul>"""
+
+HOME_CAPABILITIES = [
+    {"file": "website-redesigns.html", "title": "Website Design & Builds", "scope": "CMS · Desktop + mobile",
+     "description": "A website built from scratch, plus homepage, product, installation and blog redesigns. Explore six before-and-after comparisons and mobile examples.", "action": "Explore website work"},
+    {"file": "email-marketing.html", "title": "Email Marketing", "scope": "Drip · Creative + copy",
+     "description": "Seasonal campaigns, promotional creative and email messaging, with examples of how I connect the offer, imagery and call to action.", "action": "Explore email campaigns"},
+    {"file": "paid-advertising.html", "title": "Paid Advertising", "scope": "Google Ads · Meta Ads · Growth planning",
+     "description": "Account audits, campaign recommendations and a paid growth plan, with proposed actions clearly separated from implemented work.", "action": "Explore paid advertising"},
+    {"file": "analytics-reporting.html", "title": "Analytics & Reporting", "scope": "GA4 · Search Console · Channel reporting",
+     "description": "Performance analysis across web, search, social and email, translated into findings and practical next steps.", "action": "Explore analytics work"},
+]
 
 # Hero mosaic: (link, folder, image, alt, aria-label)
 MOSAIC = [
