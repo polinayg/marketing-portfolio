@@ -85,7 +85,7 @@ def build():
     para(link('https://levo.aero/', '<b>Levo Aero</b>') + ' &amp; ' + link('https://equipio.com/', '<b>Equipio:</b>') + ' Landing-page messaging, campaign planning, and content for aviation and equipment marketplaces.')
 
     section('TOOLS &amp; PLATFORMS')
-    para('Google Ads, Meta Ads Manager, GA4, Looker Studio, Google Search Console, Hotjar, Mixpanel, Drip, HubSpot, Adobe Photoshop, Premiere Pro, Final Cut Pro, Canva, Figma, WordPress, HTML/CSS, Monday.com, Sprout Social, Meta Business Suite')
+    para('Google Ads, Meta Ads Manager, GA4, Looker Studio, Google Search Console, Hotjar, Mixpanel, Drip, HubSpot, Adobe Photoshop, Premiere Pro, Final Cut Pro, Canva, Figma, WordPress, HTML/CSS, Monday.com, Sprout Social, Buffer, Meta Business Suite, Shopify, ChatGPT, Claude')
 
     section('EDUCATION &amp; CERTIFICATIONS')
     para('<b>University of Tennessee at Chattanooga</b> | Bachelor of Science (B.S.), Business Administration and Management | Aug 2019-Dec 2022')
