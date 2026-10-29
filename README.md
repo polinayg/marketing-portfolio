@@ -3,7 +3,7 @@
 Live site: https://polinayg.github.io/marketing-portfolio/
 
 A static, dependency-free portfolio for GitHub Pages: home (selected work, analytics, about, contact),
-five case studies (Axe & Kindle, NxtDib, Equipio, Every Window, Levo Aero) plus Analytics & Reporting, Email Marketing and Paid Advertising capability studies, and a filterable creative gallery
+five case studies (Axe & Kindle, NxtDib, Equipio, Every Window, Levo Aero) plus Analytics & Reporting, Email Marketing, Paid Advertising and Website Design & Builds capability studies, and a filterable creative gallery
 with a keyboard/swipe lightbox.
 
 ## Structure
@@ -26,6 +26,9 @@ To add a carousel: drop WebP files into `assets/img/<brand>/`, create `-sm.webp`
 Brand studies live in `PROJECTS`; capability studies live in `CAPABILITIES`. Both are built and included in the sitemap; only brands appear in the homepage project list and gallery.
 
 Add a set to the project's `sets` list in `tools/content.py`, rebuild.
+
+## Website redesign comparisons
+`website-redesigns.html` features the confirmed NxtDib website build from scratch and compares supplied Every Window and Axe & Kindle homepage screenshots. `comparisons` in `tools/content.py` controls the copy and image prefixes. Full captures are under `assets/img/web-redesigns/`; matching `-preview.webp` and `-preview-sm.webp` crops support hero previews. `assets/css/web-redesigns.css` is loaded only for this page. Scroll regions and native image links work without JavaScript. Captures document visible design changes, not measured performance gains.
 
 ## Data integrity
 Homepage social metrics come from the Sprout Social “Post Performance (NXT)” export, Sept 17, 2025 – Oct 26, 2026.

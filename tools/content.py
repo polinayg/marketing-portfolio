@@ -712,10 +712,57 @@ PAID_ADS_CS = {
                   desc="Existing portfolio creative for Levo. Shown as design examples alongside the proposed acquisition strategy; these concepts do not demonstrate that a campaign launched or produced results.")],
 }
 
+WEB_CS = {
+    "slug": "website-redesigns", "file": "website-redesigns.html", "name": "Website Design & Builds",
+    "kicker": "Capability · Website builds & redesigns",
+    "meta": "Website portfolio by Polina Gaydamachenko: NxtDib built from scratch, plus before-and-after homepage redesigns for Every Window and Axe & Kindle.",
+    "brand": {"bg": "#173b3c", "ink": "#f3f0e5", "accent": "#d3cc96", "accent_on_paper": "#5b672d"},
+    "headline": "Built for the <em>next step.</em>",
+    "lede": "I built NxtDib’s website from scratch and redesigned the Every Window and Axe &amp; Kindle homepages. This selection pairs a complete website build with before-and-after examples of content hierarchy, visual presentation and customer actions.",
+    "facts": [("Role", "Website build &amp; homepage redesign"), ("Examples", "NxtDib · Every Window · Axe &amp; Kindle"),
+              ("Evidence", "Confirmed project scope + supplied screenshots"),
+              ("Focus", "Content hierarchy · Visual consistency · Calls to action")],
+    "cover_wide": True, "cover_folder": "web-redesigns",
+    "cover": [("ew-after-preview", "Every Window redesigned homepage preview"),
+              ("ak-after-preview", "Axe & Kindle redesigned homepage preview")],
+    "head_extra": '<link rel="stylesheet" href="assets/css/web-redesigns.css?v=2026-10-29">\n',
+    "cs": {
+        "challenge": {"h": "Useful content needs a <em>clear hierarchy.</em>",
+            "body": """<p>Both homepages had to introduce the brand, explain the offer and help visitors choose their next step. Every Window combines window selection, installation information and buyer education. Axe &amp; Kindle combines firewood shopping, live-fire cooking, delivery information and trust signals.</p><p>The earlier captures already contain substantial content. My redesign work focused on how that content is presented and organized.</p>"""},
+        "strategy": {"h": "Keep the brand. Clarify the <em>journey.</em>",
+            "body": """<ul><li><strong>Lead with the offer:</strong> use the opening section to establish the brand and a visible action.</li><li><strong>Group related decisions:</strong> bring product or style selection, installation guidance and supporting information into recognizable sections.</li><li><strong>Make trust easier to find:</strong> give customer reviews and supporting content a defined place in the page.</li><li><strong>Carry the visual system through:</strong> apply consistent brand colors, section treatments and footer presentation.</li></ul>"""},
+        "role": {"h": "The redesign, <em>shown in context.</em>",
+            "body": """<p>I built <a href="https://www.nxtdib.com/" target="_blank" rel="noopener">nxtdib.com</a> from scratch as part of my multi-brand marketing work. I also redesigned the Every Window and Axe &amp; Kindle homepages; the supplied screenshots document changes to layout, content presentation, imagery and calls to action. My broader website work also includes redesigning <a href="https://levo.aero/" target="_blank" rel="noopener">levo.aero</a>.</p>"""},
+        "execution": {"h": "Two brands, <em>two visual systems.</em>",
+            "body": """<p><strong>Every Window:</strong> reorganized the installation introduction, changed the installation video from a full-width block to a text-and-video section, brought customer reviews higher into the page, and turned the style section into a visual selection grid. The redesigned footer uses a stronger deep-teal treatment.</p><p><strong>Axe &amp; Kindle:</strong> refreshed the hero imagery and message while retaining the product-species sequence. The redesigned capture shows a horizontal review presentation, a dedicated signup panel, more compact contact fields and an organized footer.</p>"""},
+        "results": {"h": "The design change is <em>visible.</em>",
+            "body": """<p>The NxtDib deliverable was a website built from scratch. For Every Window and Axe &amp; Kindle, the supplied before-and-after homepage screenshots document changes in layout, content hierarchy and visual presentation.</p><p>These captures do not establish a change in conversion rate, revenue, page speed, accessibility or user satisfaction. No performance improvement is claimed without a comparable measurement period.</p><p class="small">Sources: my confirmed NxtDib website-build experience, plus the original and redesigned homepage captures supplied for Every Window and Axe &amp; Kindle. Screenshot capture dates and responsive test results were not provided; the comparisons describe the supplied versions.</p>"""},
+        "takeaways": {"h": "Design choices worth <em>testing.</em>",
+            "body": """<ol class="takeaways"><li>A homepage can explain the offer, provide trust signals and guide a purchase without giving every section equal visual weight.</li><li>Buyer education works best when it supports a visible next action, such as selecting a style, exploring products or requesting help.</li><li>Before-and-after images demonstrate design decisions. To evaluate business impact, I would compare product/configurator clicks, form completions and purchases over equivalent periods.</li></ol>"""},
+    },
+    "work_feature": '<section class="set" aria-labelledby="nxtdib-build"><div class="set-head"><div><div class="badges"><span class="badge orig">Built from scratch</span></div><h3 id="nxtdib-build">NxtDib · A website built from scratch</h3><p>B2B wholesale beverage marketplace</p></div></div><div class="callout"><p><b>I built nxtdib.com from scratch.</b> This project demonstrates my website-building experience alongside the homepage redesigns below.</p><p><a href="https://www.nxtdib.com/" target="_blank" rel="noopener">Visit the NxtDib website ↗</a></p></div></section>',
+    "work_heading": "Website builds. <em>Thoughtful redesigns.</em>",
+    "work_intro": "Compare the supplied homepage captures side by side. Each image has its own scroll area; focus it and use the arrow keys or scroll to inspect the layout. Full captures also open in a separate tab. Screenshot text is limited to the resolution of the supplied images.",
+    "comparisons": [
+        {"id": "every-window-redesign", "name": "Every Window", "prefix": "ew",
+         "summary": "A more structured introduction to windows, installation and buyer education, using deep teal, cream and olive-gold accents.",
+         "changes": [("Installation explanation", "The redesigned page pairs installation copy and a CTA with the video instead of using a full-width video block."),
+                     ("Trust and selection", "Customer reviews appear higher on the page, and the style section becomes a visual grid of window options."),
+                     ("Content and footer", "Recent posts, educational videos and the benefits section receive more defined layouts; the footer adopts a cohesive deep-teal treatment.")]},
+        {"id": "axe-and-kindle-redesign", "name": "Axe & Kindle", "prefix": "ak",
+         "summary": "A refreshed premium-firewood homepage that retains the product sequence while updating the hero, reviews and lower-page actions.",
+         "changes": [("Opening impression", "A new outdoor fire scene and revised hero message present firewood through the experience it supports."),
+                     ("Product and proof", "Oak, hickory, mixed hardwood and pizza-cut sections remain recognizable; the customer-review grid becomes a horizontal card presentation."),
+                     ("Signup and contact", "A dedicated gold signup section and compact contact form give these actions more distinct, organized spaces above the footer.")]},
+    ],
+    "sets": [],
+}
+
 # Keep brand navigation, homepage cards and gallery stable. Capability pages
 # are reached from the homepage analytics section and built with the same template.
 PROJECTS = [AK, NX, EQ, EW, LEVO]
 # Retain the published capability navigation while making the new study discoverable.
 ANALYTICS_CS["next_case"] = "email-marketing"
-CAPABILITIES = [EMAIL_CS, ANALYTICS_CS, PAID_ADS_CS]
+PAID_ADS_CS["next_case"] = "email-marketing"
+CAPABILITIES = [EMAIL_CS, ANALYTICS_CS, PAID_ADS_CS, WEB_CS]
 CASE_STUDIES = PROJECTS + CAPABILITIES

@@ -25,7 +25,7 @@ else:
     FONT, BOLD = 'Helvetica', 'Helvetica-Bold'
 INK = colors.HexColor('#24333b')
 ACCENT = colors.HexColor('#174957')
-STYLE = ParagraphStyle('body', fontName=FONT, fontSize=9.3, leading=10.6,
+STYLE = ParagraphStyle('body', fontName=FONT, fontSize=9.3, leading=10.5,
                        textColor=INK, spaceAfter=1)
 BULLET = ParagraphStyle('bullet', parent=STYLE, leftIndent=9, firstLineIndent=-7, spaceAfter=1)
 SECTION = ParagraphStyle('section', parent=STYLE, fontName=BOLD, fontSize=9.8,
@@ -81,7 +81,7 @@ def build():
     section('SELECTED BRAND EXPERIENCE')
     para(link('https://axeandkindle.com/', '<b>Axe &amp; Kindle:</b>') + ' E-commerce product launches, seasonal email campaigns, Meta advertising, SEO content, and social media content and campaigns.')
     para(link('https://everywindow.com/', '<b>Every Window:</b>') + ' Website UX and SEO, Google Ads analysis, lead-generation content, and homeowner/contractor messaging.')
-    para(link('https://nxtdib.com/', '<b>NxtDib:</b>') + ' B2B buyer-focused social campaigns and creative direction for a wholesale beverage marketplace.')
+    para(link('https://nxtdib.com/', '<b>NxtDib:</b>') + ' Built nxtdib.com from scratch; B2B buyer-focused social campaigns and creative direction for a wholesale beverage marketplace.')
     para(link('https://levo.aero/', '<b>Levo Aero</b>') + ' &amp; ' + link('https://equipio.com/', '<b>Equipio:</b>') + ' Landing-page messaging, campaign planning, and content for aviation and equipment marketplaces.')
 
     section('TOOLS &amp; PLATFORMS')

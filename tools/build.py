@@ -25,7 +25,7 @@ def picture(folder, name, alt, sizes="(max-width:760px) 60vw, 300px", eager=Fals
     W, _ = dims(full)
     load = 'fetchpriority="high"' if eager else 'loading="lazy"'
     c = f' class="{cls}"' if cls else ''
-    return (f'<img{c} src="{sm}" srcset="{sm} 640w, {full} {W}w" sizes="{sizes}" '
+    return (f'<img{c} src="{sm}" srcset="{sm} {w}w, {full} {W}w" sizes="{sizes}" '
             f'width="{w}" height="{h}" alt="{E(alt)}" {load} decoding="async">')
 
 def head(title, desc, path, og_img="assets/img/og-cover.jpg", extra=""):
@@ -127,6 +127,23 @@ def brand_style(p):
     b = p["brand"]
     return f'--b-bg:{b["bg"]};--b-ink:{b["ink"]};--b-accent:{b["accent"]};--accent:{b["accent_on_paper"]}'
 
+def redesign_comparison(c):
+    figures = []
+    for label, suffix in [("Before", "before"), ("After", "after")]:
+        path = f'assets/img/web-redesigns/{c["prefix"]}-{suffix}.webp'
+        w, h = dims(path)
+        alt = f'{c["name"]} homepage {suffix} redesign, supplied full-page screenshot'
+        figures.append(f'<figure class="comparison-figure"><figcaption><b>{label}</b>'
+                       f'<a href="{path}" target="_blank" rel="noopener">Open {label.lower()} capture ↗</a></figcaption>'
+                       f'<div class="capture-scroll" tabindex="0" role="region" aria-label="{E(c["name"])} {label.lower()} screenshot, scroll to explore">'
+                       f'<img src="{path}" width="{w}" height="{h}" alt="{E(alt)}" loading="lazy" decoding="async"></div></figure>')
+    changes = "".join(f'<article class="reel"><h4>{E(title)}</h4><p>{E(body)}</p></article>'
+                      for title, body in c["changes"])
+    return (f'<section class="set" aria-labelledby="{c["id"]}"><div class="set-head"><div>'
+            f'<div class="badges"><span class="badge">Homepage redesign · Before &amp; after</span></div>'
+            f'<h3 id="{c["id"]}">{E(c["name"])}</h3><p>{E(c["summary"])}</p></div></div>'
+            f'<div class="comparison-grid">{"".join(figures)}</div><div class="reel-cards comparison-notes">{changes}</div></section>')
+
 def case_page(p, nxt):
     chapters = [("challenge", "Challenge"), ("strategy", "Strategy"), ("role", "My Role"),
                 ("execution", "Execution"), ("results", "Results"), ("takeaways", "Key Takeaways")]
@@ -135,7 +152,7 @@ def case_page(p, nxt):
     for k, t in chapters:
         body.append(f'<section class="chapter" id="{k}"><header><div class="eyebrow">{t}</div><h2>{p["cs"][k]["h"]}</h2></header><div class="body">{p["cs"][k]["body"]}</div></section>')
     sets = "".join(slideset(p, s, i) for i, s in enumerate(p.get("sets", [])))
-    if not p.get("sets"):
+    if not p.get("sets") and not p.get("comparisons"):
         sets = f'<div class="callout">{p.get("pending_note","")}</div>'
     examples = []
     for example in p.get("work_examples", []):
@@ -145,6 +162,7 @@ def case_page(p, nxt):
                         f'<div class="badges"><span class="badge">Analysis &amp; proposed next steps</span></div>'
                         f'<h3 id="{example["id"]}">{E(example["title"])}</h3><p>{E(example["source"])}</p>'
                         f'</div></div><div class="reel-cards">{cards}</div></section>')
+    comparisons = "".join(redesign_comparison(c) for c in p.get("comparisons", []))
     work_heading = p.get("work_heading", "See the <em>creative.</em>")
     work_intro = p.get("work_intro", "Tap any slide to view it full size. Use arrow keys or swipe to move through a carousel.")
     hero_stack = ""
@@ -152,7 +170,7 @@ def case_page(p, nxt):
         wcls = ' wide-stack' if p.get("cover_wide") else ''
         hero_stack = f'<div class="stack cs-stack{wcls}">' + "".join(picture(p["cover_folder"], n, a, "(max-width:900px) 30vw, 200px", eager=True) for n, a in p["cover"]) + '</div>'
     facts = "".join(f'<div><dt>{E(a)}</dt><dd>{b}</dd></div>' for a, b in p["facts"])
-    out = head(f'{p["name"]} — Case Study | Polina Gaydamachenko', p["meta"], p["file"])
+    out = head(f'{p["name"]} — Case Study | Polina Gaydamachenko', p["meta"], p["file"], extra=p.get("head_extra", ""))
     out += header("work")
     out += f"""<main id="main">
 <section class="cs-hero" style="{brand_style(p)}" id="top"><div class="wrap">
@@ -172,7 +190,7 @@ def case_page(p, nxt):
 <section class="work" id="work-{p['slug']}" style="--accent:{p['brand']['accent_on_paper']}"><div class="wrap">
 <div class="eyebrow">The Work</div><h2>{work_heading}</h2>
 <p class="lede" style="margin-top:18px">{E(work_intro)}</p>
-{"".join(examples)}{sets}
+{"".join(examples)}{p.get("work_feature", "")}{comparisons}{sets}
 {reels_block(p)}
 </div></section>
 <div class="wrap"><a class="next-proj" href="{nxt['file']}"><div class="eyebrow">Next case study</div><h2>{E(nxt['name'])} <span aria-hidden="true">→</span></h2></a></div>
@@ -248,7 +266,7 @@ def home():
 <figure class="chart" style="margin:0"><h3>What earns attention</h3><p class="sub">Average engagements per post by format. Reels here are mostly curated third-party clips — a sourcing insight, not a claim about my own video.</p>{bars(A['by_format'], 35, "{:.1f}")}</figure>
 </div>
 <p class="source">{A['note']}</p>
-<div class="btn-row"><a class="btn" style="background:var(--lime);color:var(--green);border-color:var(--lime)" href="analytics-reporting.html">Analytics &amp; Reporting case study →</a><a class="btn ghost" style="color:#eef0e4;border-color:#6d806f" href="email-marketing.html">Email Marketing case study →</a><a class="btn ghost" style="color:#eef0e4;border-color:#6d806f" href="paid-advertising.html">Paid Advertising case study →</a></div>
+<div class="btn-row"><a class="btn" style="background:var(--lime);color:var(--green);border-color:var(--lime)" href="analytics-reporting.html">Analytics &amp; Reporting case study →</a><a class="btn ghost" style="color:#eef0e4;border-color:#6d806f" href="email-marketing.html">Email Marketing case study →</a><a class="btn ghost" style="color:#eef0e4;border-color:#6d806f" href="paid-advertising.html">Paid Advertising case study →</a><a class="btn ghost" style="color:#eef0e4;border-color:#6d806f" href="website-redesigns.html">Website Design &amp; Builds case study →</a></div>
 </div></section>
 
 <section class="section" id="about"><div class="wrap split">
