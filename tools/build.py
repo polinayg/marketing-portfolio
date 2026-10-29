@@ -130,11 +130,15 @@ def brand_style(p):
 def redesign_comparison(c):
     figures = []
     for label, suffix in [("Before", "before"), ("After", "after")]:
-        path = f'assets/img/web-redesigns/{c["prefix"]}-{suffix}.png'
+        path = c.get("captures", {}).get(suffix, f'assets/img/web-redesigns/{c["prefix"]}-{suffix}.png')
+        original = c.get("originals", {}).get(suffix, path)
+        fmt = c.get("source_format", "PNG")
+        download_href = original + "&download=1" if fmt == "PDF" else original
+        download_attr = 'target="_blank" rel="noopener"' if fmt == "PDF" else "download"
         w, h = dims(path)
         alt = f'{c["name"]} homepage {suffix} redesign, supplied full-page screenshot'
         figures.append(f'<figure class="comparison-figure comparison-{suffix}"><figcaption><b>{label}</b>'
-                       f'<span class="capture-links"><a href="{path}" target="_blank" rel="noopener">Open original PNG ↗</a><a href="{path}" download>Download PNG ↓</a></span></figcaption>'
+                       f'<span class="capture-links"><a href="{original}" target="_blank" rel="noopener">Open original {fmt} ↗</a><a href="{download_href}" {download_attr}>Download {fmt} ↓</a></span></figcaption>'
                        f'<div class="capture-scroll" tabindex="0" role="region" aria-label="{E(c["name"])} {label.lower()} screenshot, scroll to explore">'
                        f'<img src="{path}" width="{w}" height="{h}" alt="{E(alt)}" loading="lazy" decoding="async"></div></figure>')
     detail = ""
@@ -142,14 +146,16 @@ def redesign_comparison(c):
         d = c["detail"]
         path = d["path"]
         w, h = dims(path)
-        detail = (f'<figure class="redesign-detail"><figcaption><span class="badge">Current site · Oct 29, 2026</span>'
+        badge = E(d.get("badge", "Current site · Oct 29, 2026"))
+        detail = (f'<figure class="redesign-detail"><figcaption><span class="badge">{badge}</span>'
                   f'<h4>{E(d["title"])}</h4><p>{E(d["desc"])}</p></figcaption>'
                   f'<a href="{path}" target="_blank" rel="noopener" aria-label="Open full-size {E(c["name"])} detail">'
                   f'<img src="{path}" width="{w}" height="{h}" alt="{E(d["title"])} — current desktop site detail" loading="lazy" decoding="async"></a>'
                   f'<p class="small"><a href="{path}" target="_blank" rel="noopener">Open full-size detail ↗</a></p></figure>')
     changes = "".join(f'<article class="reel"><h4>{E(title)}</h4><p>{E(body)}</p></article>'
                       for title, body in c["changes"])
-    return (f'<section class="set" aria-labelledby="{c["id"]}"><div class="set-head"><div>'
+    cls = "set comparison-pdf" if c.get("originals") else "set"
+    return (f'<section class="{cls}" aria-labelledby="{c["id"]}"><div class="set-head"><div>'
             f'<div class="badges"><span class="badge">Homepage redesign · Before &amp; after</span></div>'
             f'<h3 id="{c["id"]}">{E(c["name"])}</h3><p>{E(c["summary"])}</p></div></div>'
             f'<div class="comparison-grid">{"".join(figures)}</div><div class="reel-cards comparison-notes">{changes}</div>{detail}</section>')
@@ -334,6 +340,14 @@ def gallery():
     out += footer()
     return out
 
+def pdf_viewer_page():
+    out = head("Original website capture PDF | Polina Gaydamachenko", "Open or download an original website redesign capture PDF.", "pdf-viewer.html", extra='<meta name="robots" content="noindex">\n<style>#pdf-open[hidden],#pdf-download[hidden],#pdf-frame[hidden]{display:none}</style>\n')
+    out += header("work")
+    out += '<main id="main"><section class="section" id="top"><div class="wrap"><a href="website-redesigns.html#work-website-redesigns">← Website Design &amp; Builds</a><h1 style="font-size:clamp(36px,5vw,64px);margin-top:24px" id="pdf-title">Original PDF</h1><p id="pdf-status" role="status">Loading the original capture…</p><div class="btn-row" style="margin:24px 0"><a id="pdf-open" class="btn" hidden target="_blank" rel="noopener">Open PDF ↗</a><a id="pdf-download" class="btn ghost" hidden>Download original PDF ↓</a></div><iframe id="pdf-frame" title="Original website capture PDF" style="width:100%;height:80vh;border:1px solid var(--line);background:white" hidden></iframe></div></section></main>'
+    out += '<script src="assets/js/pdf-viewer.js?v=2026-10-29" defer></script>'
+    out += footer()
+    return out
+
 def notfound():
     out = head("Page not found | Polina Gaydamachenko", "This page doesn't exist.", "404.html", extra='<base href="/marketing-portfolio/">\n<meta name="robots" content="noindex">\n')
     out += header()
@@ -349,6 +363,7 @@ if __name__ == "__main__":
     write("index.html", home())
     write("gallery.html", gallery())
     write("404.html", notfound())
+    write("pdf-viewer.html", pdf_viewer_page())
     ps = C.CASE_STUDIES
     # Preserve the five-brand next-study loop; give capabilities their own loop.
     for group in (C.PROJECTS, C.CAPABILITIES):

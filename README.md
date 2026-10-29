@@ -39,3 +39,5 @@ The analytics study labels approximate follower gains as ad-assisted and omits c
 
 ## Backup
 The pre-redesign site is preserved at git tag `v1-original-backup`.
+
+Axe & Kindle now uses the supplied high-resolution PDF pair in `assets/docs/pdf/ak-{before,after}/`. The PDFs are stored as byte-preserving parts to fit the publishing transfer limits; `pdf-viewer.html` reassembles them and validates SHA-256 before showing open/download controls. The page displays 1008px-wide previews derived from their embedded 3024px-wide captures, with direct open/download links to the PDFs for full-quality zoom. Its review detail is cropped from the supplied after PDF. Earlier PNG URLs remain available.
