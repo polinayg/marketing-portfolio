@@ -8,7 +8,7 @@ VERSION = "2026-10-29"
 DATE = "2026-10-29"
 EMAIL = "polinayg99@gmail.com"
 LINKEDIN = "https://www.linkedin.com/in/polina-gaydamachenko/"
-RESUME_FILE = "assets/docs/Polina_Gaydamachenko_Resume.pdf"
+RESUME_FILE = "assets/docs/Polina_Gaydamachenko_Resume.pdf?v=2026-10-29-aligned"
 
 HOME_META = ("Portfolio of Polina Gaydamachenko, Multi-Brand Marketing Manager: social and email campaigns, "
              "website builds and redesigns, paid advertising and analytics across five B2C and B2B brands.")
@@ -83,6 +83,7 @@ AK = {
               ("Tools", "Canva · Buffer · Drip · Sprout Social · AI image tools"), ("Period shown", "Sept 2025 – Nov 2026")],
     "card_title": "Making firewood feel like a <em>ritual.</em>",
     "card_text": "Seasonal storytelling, fire-building education and customer proof for a premium kiln-dried firewood brand — across social and email.",
+    "kpi_context": 'Instagram results · Sept 17, 2025 – Oct 26, 2026',
     "kpis": [("3,082", "Engagements"), ("597", "Shares"), ("585", "Saves")],
     "chips": ["Content calendars", "Carousels", "Email headers", "Creator curation"],
     "cover_folder": "ak", "cover": [("top-down-fire-01", "Axe & Kindle “Fire-building 101: the top-down fire” carousel cover"),
@@ -206,6 +207,7 @@ NX = {
               ("Tools", "Canva · ChatGPT image generation · Buffer · Sprout"), ("Period shown", "Sept 2025 – Nov 2026")],
     "card_title": "Turning category shifts into <em>shelf decisions.</em>",
     "card_text": "An editorial B2B content system for a wholesale beverage marketplace: buyer checklists, merchandising playbooks and seasonal stocking guides.",
+    "kpi_context": 'Instagram post counts · Sept 17, 2025 – Oct 26, 2026 · Publishing across 3 channels',
     "kpis": [("114", "Feed posts"), ("58", "Carousels"), ("3", "Channels")],
     "chips": ["B2B content", "LinkedIn carousels", "Brand system", "AI-assisted production"],
     "cover_folder": "nxtdib", "cover": [("li-10-questions-01", "NxtDib LinkedIn carousel cover: “10 questions to ask before a first order”"),
@@ -312,6 +314,7 @@ EQ = {
               ("Tools", "Canva · Buffer · Sprout Social"), ("Period shown", "Sept 2025 – Oct 2026")],
     "card_title": "Speaking the language of <em>film crews.</em>",
     "card_text": "Gear breakdowns, rig curation and RFQ education for a film and TV equipment rental marketplace.",
+    "kpi_context": 'Instagram results · Sept 17, 2025 – Oct 26, 2026',
     "kpis": [("3,685", "Engagements"), ("526", "Saves"), ("365", "Shares")],
     "chips": ["Creator curation", "Community content", "RFQ education", "LinkedIn"],
     "cover_folder": "equipio", "cover": [("eq-car1-01", "Equipio carousel cover: “Renting gear, the smart way”"),
@@ -403,6 +406,7 @@ EW = {
               ("Tools", "Canva · AI image tools · Buffer"), ("Period shown", "Oct 28 – Nov 27, 2026")],
     "card_title": "Windows, without the <em>sales visit.</em>",
     "card_text": "A month-long buyer-education program — quote checklists, style comparisons and repair-or-replace guides — built to look and sound like the website.",
+    "kpi_context": 'Planned content program · Oct 28 – Nov 27, 2026',
     "kpis": [("19", "Posts planned"), ("4/wk", "Cadence"), ("3", "Channels")],
     "chips": ["Content calendar", "Educational carousels", "Brand consistency", "LinkedIn documents"],
     "cover_folder": "every-window", "cover": [("how-it-works-01", "Every Window carousel cover: “Windows, without the sales visit”"),
@@ -488,6 +492,7 @@ LEVO = {
               ("Tools", "CMS · Canva"), ("Performance data", "Not reported")],
     "card_title": "Making private aviation <em>pricing</em> clear.",
     "card_text": "Enterprise pricing landing pages built in the CMS, plus paid-social ad creative for LinkedIn and Instagram.",
+    "kpi_context": 'Project deliverable · Enterprise pages built in the development CMS',
     "kpis": [("4", "Enterprise pricing pages")],
     "chips": ["Landing pages", "CMS", "Pricing tiers", "Ad creative"],
     "cover_folder": "levo", "cover": [("levo-story-01", "Levo story ad frame: “Your time.” over a private jet on a runway"),

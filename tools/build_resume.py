@@ -50,17 +50,17 @@ def build():
     def section(text): para(text, SECTION)
     def bullet(text): para('• ' + text, BULLET)
     para('POLINA GAYDAMACHENKO', NAME)
-    para('MULTI-BRAND MARKETING MANAGER | DIGITAL &amp; SOCIAL MEDIA STRATEGY', TITLE)
+    para('MULTI-BRAND MARKETING MANAGER | STRATEGY, CREATIVE &amp; EXECUTION', TITLE)
     para('Brentwood, TN | ' + link('tel:+16158300088', '(615) 830-0088') + ' | ' +
          link('mailto:polinayg99@gmail.com', 'polinayg99@gmail.com') + ' | ' +
          link('https://www.linkedin.com/in/polina-gaydamachenko/', 'LinkedIn') + ' | ' +
          link('https://polinayg.github.io/marketing-portfolio/', 'Portfolio'), CONTACT)
 
     section('PROFESSIONAL PROFILE')
-    para('Digital marketing professional with 4+ years of experience leading multi-channel initiatives across e-commerce, B2B, technology, and marketplace brands. Combines social media strategy, UGC and short-form video production, paid advertising, email automation, SEO, website optimization, and analytics. Experienced managing campaigns from concept through launch, collaborating with developers and stakeholders, and translating performance insights into actionable improvements.')
+    para('Multi-Brand Marketing Manager with 4+ years of experience across e-commerce, B2B, technology, and marketplace brands. Combines marketing strategy with hands-on execution in social media, email campaigns, website builds and redesigns, paid advertising, and analytics. Manages campaigns from concept through launch, works with developers and stakeholders, and translates performance findings into practical improvements.')
 
     section('CORE SKILLS')
-    para('Social Media Strategy &amp; Community Management | Content Calendars &amp; Creative Direction | UGC &amp; Short-Form Video | Meta Ads &amp; Google Ads | Email Marketing &amp; Automation | SEO &amp; Website Optimization | GA4 &amp; Reporting | AI-Assisted Content &amp; Prompt Engineering | AI Workflow Automation')
+    para('Social Media Strategy &amp; Community Management | Content Calendars &amp; Creative Direction | UGC &amp; Short-Form Video | Meta Ads &amp; Google Ads | Email Marketing &amp; Automation | Website Builds, Redesigns &amp; SEO | GA4 &amp; Reporting | AI-Assisted Content &amp; Prompt Engineering | AI Workflow Automation')
 
     section('PROFESSIONAL EXPERIENCE')
     para('NXT COMPANIES | Franklin, TN', ROLE)
@@ -69,7 +69,7 @@ def build():
     bullet('Own cross-channel campaigns from positioning, briefs, content calendars, and creative production through landing pages, email deployment, stakeholder approvals, and launch QA.')
     bullet('Develop social content, UGC-style assets, graphics, short-form video, and audience-specific messaging to support awareness, engagement, and lead generation.')
     bullet('Plan and evaluate Meta and Google Ads initiatives; use GA4, Looker Studio, and platform data to identify improvements in targeting, creative, traffic quality, and conversion paths.')
-    bullet('Partner with developers and leadership on website UX, SEO content, product launches, CMS updates, and conversion-focused calls to action; coordinate dependencies in Monday.com.')
+    bullet('Build and redesign CMS pages, organize product and educational content, and refine calls to action; coordinate website functionality and launch dependencies with developers and leadership in Monday.com.')
     para('<b>Digital Marketing Coordinator</b> | May 2023-May 2026', ROLE)
     bullet('Executed social media, email, paid media, and website initiatives across multiple brands, adapting channel strategies and creative to different customer segments.')
     bullet('Built and deployed promotional and segmented email campaigns using Drip and HubSpot, coordinating copy, HTML layouts, assets, timing, and audience targeting.')
@@ -79,8 +79,8 @@ def build():
     bullet('Produced campaign creative, tracked engagement and KPIs, and collaborated with internal teams on content planning and performance improvements.')
 
     section('SELECTED BRAND EXPERIENCE')
-    para(link('https://axeandkindle.com/', '<b>Axe &amp; Kindle:</b>') + ' E-commerce product launches, seasonal email campaigns, Meta advertising, SEO content, and social media content and campaigns.')
-    para(link('https://everywindow.com/', '<b>Every Window:</b>') + ' Website UX and SEO, Google Ads analysis, lead-generation content, and homeowner/contractor messaging.')
+    para(link('https://axeandkindle.com/', '<b>Axe &amp; Kindle:</b>') + ' Redesigned the homepage, blog, and every product page; seasonal email campaigns, paid creative, SEO, and social content.')
+    para(link('https://everywindow.com/', '<b>Every Window:</b>') + ' Redesigned the homepage, a product page, and the installation page; Google Ads analysis and homeowner/contractor messaging.')
     para(link('https://nxtdib.com/', '<b>NxtDib:</b>') + ' Built ' + link('https://www.nxtdib.com/', 'www.nxtdib.com') + ' from scratch; B2B buyer-focused social campaigns and creative direction for a wholesale beverage marketplace.')
     para(link('https://levo.aero/', '<b>Levo Aero</b>') + ' &amp; ' + link('https://equipio.com/', '<b>Equipio:</b>') + ' Landing-page messaging, campaign planning, and content for aviation and equipment marketplaces.')
 
@@ -89,7 +89,7 @@ def build():
 
     section('EDUCATION &amp; CERTIFICATIONS')
     para('<b>University of Tennessee at Chattanooga</b> | Bachelor of Science (B.S.), Business Administration and Management | Aug 2019-Dec 2022')
-    para('<b>Vanderbilt University</b> | Certificate, Digital Marketing Bootcamp | Dec 2021-Apr 2022 | Grade: A+<br/>18-week intensive program in digital marketing strategy, campaign development and optimization, digital advertising, analytics, and reporting.')
+    para('<b>Vanderbilt University</b> | Certificate, Digital Marketing Bootcamp | Dec 2021-Apr 2022 | Grade: A+')
     para('<b>Google (2026)</b> | Stay Ahead of the AI Curve; Introduction to AI; Discover the Art of Prompting; Maximize Productivity With AI Tools; Use AI Responsibly')
     para('<b>Advancing Women in Tech / Anthropic (2026)</b> | AI Fundamentals with Claude; AI Collaboration with Claude; AI Automation with Claude')
     para('<b>Coursera (2026)</b> | AI Enablement I; AI Productivity II')

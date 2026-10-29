@@ -248,7 +248,7 @@ def bars(rows, maxv, fmt="{:,}", unit=""):
 
 def home():
     A = C.ANALYTICS
-    out = head("Polina Gaydamachenko — Multi-Brand Marketing Manager", C.HOME_META, "", extra='<link rel="stylesheet" href="assets/css/home.css?v=2026-10-29-scope">\n')
+    out = head("Polina Gaydamachenko — Multi-Brand Marketing Manager", C.HOME_META, "", extra='<link rel="stylesheet" href="assets/css/home.css?v=2026-10-29-finish">\n')
     out += f'<script type="application/ld+json">{json.dumps(C.JSONLD)}</script>\n'
     out += header()
     mosaic = "".join(f'<a href="{f}" aria-label="{E(lbl)}">{picture(fo, n, alt, "(max-width:760px) 33vw, 200px", eager=i < 3)}</a>'
@@ -271,6 +271,7 @@ def home():
 <div><div class="project-num">{i:02d} — {E(p['kicker'])}</div>
 <h3>{p['card_title']}</h3><p class="small" style="font-size:16px;color:var(--ink-2)">{p['card_text']}</p>
 {f'<div class="kpis">{kpis}</div>' if kpis else ''}
+{f'<p class="kpi-context">{E(p["kpi_context"])}</p>' if p.get("kpi_context") else ""}
 <ul class="chips">{chips}</ul>
 <a class="textlink" href="{p['file']}">Read the case study <span aria-hidden="true">→</span></a></div></article>""")
     stats = "".join(f'<div><b>{v}</b><span>{E(l)}</span></div>' for v, l in A["tiles"])
@@ -326,7 +327,7 @@ def home():
 
 <section class="section contact" id="contact"><div class="wrap">
 <div class="eyebrow">04 — Contact</div>
-<h2>Let's make something <em>worth saving.</em></h2>
+<h2>Let's move your <em>marketing forward.</em></h2>
 <p class="lede" style="color:var(--green);margin-top:22px">Open to Marketing Manager, Digital Marketing Manager, Content Marketing Manager and Social Media Manager roles.</p>
 <div class="btn-row" style="margin-top:24px"><a class="btn" href="{C.RESUME_FILE}" download>Download Résumé (PDF) ↓</a></div>
 <div class="contact-links">

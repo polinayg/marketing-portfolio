@@ -21,3 +21,5 @@
 .capability-action{margin-top:auto;font-size:13px;font-weight:600;border-bottom:1px solid currentColor;padding-bottom:3px}
 .capability-action>span{margin-left:8px}
 @media(max-width:760px){.home-showcase{grid-template-columns:1fr;gap:20px}.home-devices{aspect-ratio:2.2}.home-web-preview{padding:16px}.capability-grid{grid-template-columns:1fr}.capability-card{padding:24px}}
+
+.kpi-context{margin:12px 0 0;font-size:12px;line-height:1.6;color:var(--muted);max-width:60ch}
