@@ -8,6 +8,7 @@ VERSION = "2026-10-29"
 DATE = "2026-10-29"
 EMAIL = "polinayg99@gmail.com"
 LINKEDIN = "https://www.linkedin.com/in/polina-gaydamachenko/"
+RESUME_FILE = "assets/docs/Polina_Gaydamachenko_Resume.pdf"
 
 HOME_META = ("Portfolio of Polina Gaydamachenko, a multi-brand digital marketer: social media strategy, original "
              "carousel and email creative, and verified Sprout Social results for Axe & Kindle, NxtDib, Equipio, "

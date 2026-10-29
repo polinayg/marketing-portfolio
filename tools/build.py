@@ -210,7 +210,7 @@ def home():
 <div class="eyebrow">Social media · Content marketing · Multi-brand</div>
 <h1>Content with a <em>point of view.</em></h1>
 <p class="lede" style="margin-top:28px">I'm Polina — a digital marketer who plans, designs, writes and publishes social and email content for five brands at once, from premium firewood to wholesale beverages to film-gear rentals. This is the work behind the résumé.</p>
-<div class="btn-row"><a class="btn" href="#work">View selected work ↓</a><a class="btn ghost" href="#contact">Get in touch</a></div>
+<div class="btn-row"><a class="btn" href="#work">View selected work ↓</a><a class="btn ghost" href="#contact">Get in touch</a><a class="btn ghost" href="{C.RESUME_FILE}" download>Download Résumé (PDF) ↓</a></div>
 </div>
 <dl class="hero-meta">
 <div><dt>Focus</dt><dd>Social &amp; content strategy</dd></div>
@@ -250,6 +250,7 @@ def home():
 <div class="eyebrow">04 — Contact</div>
 <h2>Let's make something <em>worth saving.</em></h2>
 <p class="lede" style="color:var(--green);margin-top:22px">Open to Social Media Manager, Content Marketing Manager and Marketing Manager roles.</p>
+<div class="btn-row" style="margin-top:24px"><a class="btn" href="{C.RESUME_FILE}" download>Download Résumé (PDF) ↓</a></div>
 <div class="contact-links">
 <a href="mailto:{C.EMAIL}">{C.EMAIL}<span>Email ↗</span></a>
 <a href="{C.LINKEDIN}" target="_blank" rel="noopener">linkedin.com/in/polina-gaydamachenko<span>LinkedIn ↗</span></a>
