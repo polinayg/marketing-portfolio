@@ -286,12 +286,12 @@ def home():
 <div class="hero-grid"><div>
 <div class="eyebrow">Multi-Brand Marketing Manager</div>
 <h1>Strategy to <em>execution.</em></h1>
-<p class="lede" style="margin-top:28px">I'm Polina, a Multi-Brand Marketing Manager connecting strategy with hands-on work across social media, email, websites, paid advertising and analytics. I manage marketing for five B2C and B2B brands, adapting the message and creative to each audience.</p>
+<p class="lede" style="margin-top:28px">I'm Polina, a Multi-Brand Marketing Manager connecting strategy with hands-on work across social media, email, websites, paid advertising and analytics. I manage marketing for four B2C and B2B brands, adapting the message and creative to each audience.</p>
 <div class="btn-row"><a class="btn" href="#capabilities">Explore my work ↓</a><a class="btn ghost" href="#work">Browse by brand</a><a class="btn ghost" href="{C.RESUME_FILE}" download>Download Résumé (PDF) ↓</a></div>
 </div>
 <dl class="hero-meta">
 <div><dt>Focus</dt><dd>Integrated marketing strategy &amp; execution</dd></div>
-<div><dt>Portfolio</dt><dd>5 brands across B2C &amp; B2B</dd></div>
+<div><dt>Portfolio</dt><dd>4 brands across B2C &amp; B2B</dd></div>
 <div><dt>Channels</dt><dd>Social · Email · Websites · Paid media</dd></div>
 <div class="hero-toolkit"><dt>Toolkit</dt><dd>CMS · Drip · GA4 · Search Console · Google &amp; Meta Ads · Sprout Social · Buffer · Adobe Premiere Pro · CapCut · AI tools</dd></div>
 </dl></div>
@@ -300,7 +300,7 @@ def home():
 <div class="home-devices" aria-hidden="true"><div class="home-desktop"><div class="home-browser-bar"><span></span><span></span><span></span></div><img src="assets/img/web-redesigns/ew-home-after-pdf-preview.webp" width="1000" height="7330" alt="" loading="lazy" decoding="async"></div><div class="home-phone"><img src="assets/img/web-redesigns/ew-home-mobile-preview.webp" width="357" height="16000" alt="" loading="lazy" decoding="async"></div></div>
 <span class="home-web-label">Website design <span>Desktop + mobile ↗</span></span></a></div>
 </div></section>
-<div class="wrap"><p class="ticker" aria-label="Brands featured"><span>Axe &amp; Kindle</span><span>NxtDib</span><span>Equipio</span><span>Every Window</span><span>Levo Aero</span></p></div>
+<div class="wrap"><p class="ticker" aria-label="Brands featured"><span>Axe &amp; Kindle</span><span>NxtDib</span><span>Equipio</span><span>Every Window</span></p></div>
 
 <section class="section tight" id="capabilities"><div class="wrap">
 <div class="split"><div><div class="eyebrow">Capabilities</div><h2>From the plan to <em>the page.</em></h2></div><p class="lede">Explore my work by discipline, from website design and email campaigns to advertising recommendations and performance analysis.</p></div>
@@ -308,7 +308,7 @@ def home():
 </div></section>
 
 <section class="section" id="work"><div class="wrap">
-<div class="split"><div><div class="eyebrow">01 — Selected Work</div><h2>Five brands. <em>One</em> standard.</h2></div>
+<div class="split"><div><div class="eyebrow">01 — Selected Work</div><h2>Four brands. <em>One</em> standard.</h2></div>
 <p class="lede">Each case study follows the same structure — challenge, strategy, my role, execution, results and takeaways — and shows the actual campaign creative. Brand colors belong to the brands; the analysis is mine.</p></div>
 <div class="projects">{"".join(projects)}</div>
 <div class="btn-row" style="margin-top:70px"><a class="btn" href="gallery.html">Open the full creative gallery →</a></div>
@@ -347,7 +347,7 @@ def home():
     return out
 
 def gallery():
-    out = head("Creative Gallery | Polina Gaydamachenko", "Original social media carousels, posts, email headers and campaign graphics designed by Polina Gaydamachenko for five brands.", "gallery.html")
+    out = head("Creative Gallery | Polina Gaydamachenko", "Original social media carousels, posts, email headers and campaign graphics designed by Polina Gaydamachenko for four brands.", "gallery.html")
     out += header("gallery")
     brands, queues = [], []
     for p in C.PROJECTS:
@@ -406,12 +406,16 @@ if __name__ == "__main__":
     write("404.html", notfound())
     write("pdf-viewer.html", pdf_viewer_page())
     ps = C.CASE_STUDIES
-    # Preserve the five-brand next-study loop; give capabilities their own loop.
+    # Preserve the featured-brand next-study loop; give capabilities their own loop.
     for group in (C.PROJECTS, C.CAPABILITIES):
         for i, p in enumerate(group):
             nxt = next((candidate for candidate in ps if candidate["slug"] == p.get("next_case")),
                        group[(i + 1) % len(group)])
             write(p["file"], case_page(p, nxt))
+    # Keep the old URL recoverable without publicly presenting archived work.
+    archived = head("Case study unavailable | Polina Gaydamachenko", "This case study is currently not featured.", "levo-aero.html", extra='<meta name="robots" content="noindex, nofollow">\n')
+    archived += header() + '<main id="main"><section class="section"><div class="wrap"><h1>Case study currently unavailable.</h1><p><a href="index.html#work">Explore featured work →</a></p></div></section></main>' + footer()
+    write("levo-aero.html", archived)
     urls = [""] + ["gallery.html"] + [p["file"] for p in ps]
     sm = "".join(f"<url><loc>{SITE}{u}</loc><lastmod>{C.DATE}</lastmod></url>" for u in urls)
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')

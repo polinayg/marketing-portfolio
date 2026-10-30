@@ -11,7 +11,7 @@ LINKEDIN = "https://www.linkedin.com/in/polina-gaydamachenko/"
 RESUME_FILE = "assets/docs/Polina_Gaydamachenko_Resume.pdf?v=2026-10-29-aligned"
 
 HOME_META = ("Portfolio of Polina Gaydamachenko, Multi-Brand Marketing Manager: social and email campaigns, "
-             "website builds and redesigns, paid advertising and analytics across five B2C and B2B brands.")
+             "website builds and redesigns, paid advertising and analytics across four B2C and B2B brands.")
 
 JSONLD = {
     "@context": "https://schema.org", "@type": "Person", "name": "Polina Gaydamachenko",
@@ -32,11 +32,11 @@ ANALYTICS = {
     "note": ("Source: Sprout Social Post Performance export, Sept 17, 2025 – Oct 26, 2026: 419 Instagram feed posts "
              "across @axeandkindle, @goequipio and @nxtdib (2 Stories excluded), all listing Polina Gaydamachenko as sender. "
              "Totals count post-level interactions, not unique people, and include original creative and curated Reels. "
-             "Every Window and Levo Aero are outside this export. These are content metrics, not revenue, conversion or follower-growth results."),
+             "Every Window is outside this export. These are content metrics, not revenue, conversion or follower-growth results."),
 }
 
-ABOUT = """<p class="lede">I'm the Multi-Brand Marketing Manager at NXT Companies, a vertical-AI venture studio, managing marketing across five B2C and B2B brands.</p>
-<p>I connect planning with hands-on execution: social content and publishing, email campaigns in Drip, website builds and redesigns in the CMS, and Google and Meta advertising. My work spans consumer products, wholesale marketplaces, home improvement, film equipment and private aviation.</p>
+ABOUT = """<p class="lede">I'm the Multi-Brand Marketing Manager at NXT Companies, a vertical-AI venture studio, managing marketing across four B2C and B2B brands.</p>
+<p>I connect planning with hands-on execution: social content and publishing, email campaigns in Drip, website builds and redesigns in the CMS, and Google and Meta advertising. My work spans consumer products, wholesale marketplaces, home improvement, and film equipment.</p>
 <p>I use GA4, Google Search Console and Sprout Social to understand performance and turn findings into campaign and website recommendations. I adapt the message and visual system to each audience while keeping the work consistent across channels.</p>
 <p>AI image generation and writing tools are part of my production workflow, with my editing, design decisions and brand review guiding the final work.</p>
 <ul class="about-list">
@@ -688,34 +688,30 @@ ANALYTICS_CS = {
 PAID_ADS_CS = {
     "slug": "paid-advertising", "file": "paid-advertising.html", "name": "Paid Advertising",
     "kicker": "Capability · Paid media analysis & strategy",
-    "meta": "Paid advertising case study: Polina Gaydamachenko's Google Ads audits, campaign analysis and acquisition planning for Axe & Kindle, Every Window and Levo Aero. Recommendations distinguished from measured results.",
+    "meta": "Paid advertising case study: Polina Gaydamachenko's Google Ads audits, campaign analysis for Axe & Kindle and Every Window. Recommendations distinguished from measured results.",
     "brand": {"bg": "#182d40", "ink": "#eff4f7", "accent": "#a8d8dd", "accent_on_paper": "#2c6170"},
     "headline": "Better decisions <em>before</em> more spend.",
-    "lede": "I reviewed paid-search performance for Axe &amp; Kindle and Every Window, then developed a paid-acquisition plan for Levo Aero. The work connects measurement, search intent, landing pages and campaign priorities.",
+    "lede": "I reviewed paid-search performance for Axe &amp; Kindle and Every Window. The work connects measurement, search intent, landing pages and campaign priorities.",
     "facts": [("Role", "Audit, analysis &amp; recommendations"),
-              ("Channels", "Google Ads · Proposed LinkedIn &amp; remarketing"),
-              ("Inputs", "Google Ads · GA4 reports · Website review"),
+              ("Channels", "Google Ads"),
+              ("Inputs", "Google Ads · GA4 reports"),
               ("Period", "October 2026")],
-    "cover_wide": True, "cover_folder": "levo",
-    "cover": [("levo-li-ad-01", "Existing Levo LinkedIn ad concept, not a live campaign result"),
-              ("levo-li-ad-02", "Second Levo LinkedIn ad concept, not a live campaign result"),
-              ("levo-lp-01", "Existing Levo landing-page hero concept")],
     "cs": {
         "challenge": {"h": "A performance report needs <em>context.</em>",
-            "body": """<p>These brands had different paid-media questions. Axe &amp; Kindle needed a review of account measurement and campaign efficiency. Every Window needed to connect campaign reports with its store and configurator funnel. Levo needed an acquisition plan and a clear set of launch prerequisites.</p><p>The shared challenge: decide what to fix or test before committing more media spend.</p>"""},
+            "body": """<p>These brands had different paid-media questions. Axe &amp; Kindle needed a review of account measurement and campaign efficiency. Every Window needed to connect campaign reports with its store and configurator funnel.</p><p>The shared challenge: decide what to fix or test before committing more media spend.</p>"""},
         "strategy": {"h": "Measurement, intent, <em>then investment.</em>",
             "body": """<ul><li><strong>Check the signal:</strong> review conversion definitions and value reporting before drawing conclusions about efficiency.</li><li><strong>Separate intent:</strong> distinguish branded, product, research and business-buyer searches.</li><li><strong>Follow the click:</strong> connect the ad message to a relevant product, configurator, quote or demo path.</li><li><strong>Make recommendations testable:</strong> specify the next action, required access and KPI for each priority.</li></ul>"""},
-        "role": {"h": "Account review, reporting analysis, <em>launch planning.</em>",
-            "body": """<ul><li><strong>Axe &amp; Kindle:</strong> conducted a view-only Google Ads audit covering tracking, campaign allocation, search terms, copy, landing pages and a proposed B2B lead campaign.</li><li><strong>Every Window:</strong> analyzed the GA4/Data Studio sales report and monthly performance sheet. I did not have direct Google Ads account access; search terms, bidding settings and conversion configuration remained items to verify.</li><li><strong>Levo Aero:</strong> reviewed the website and product materials, defined audience-specific campaign ideas and drafted a phased acquisition plan with measurement dependencies.</li></ul>"""},
-        "execution": {"h": "Three brands, <em>different next steps.</em>",
-            "body": """<ul><li><strong>Axe &amp; Kindle:</strong> prioritized conversion-value validation and purchase/lead tracking, then recommended reviewing campaign allocation, search intent and product-page clarity.</li><li><strong>Every Window:</strong> flagged inconsistent conversion counts across reporting systems, recommended investigating branded-search efficiency and identified quote tracking and cart recovery as opportunities.</li><li><strong>Levo Aero:</strong> proposed starting with operator and broker intent on Google Search, supported by LinkedIn and remarketing once tracking and conversion paths were ready. Traveler acquisition was a later, limited test.</li></ul>"""},
+        "role": {"h": "Account review &amp; <em>reporting analysis.</em>",
+            "body": """<ul><li><strong>Axe &amp; Kindle:</strong> conducted a view-only Google Ads audit covering tracking, campaign allocation, search terms, copy, landing pages and a proposed B2B lead campaign.</li><li><strong>Every Window:</strong> analyzed the GA4/Data Studio sales report and monthly performance sheet. I did not have direct Google Ads account access; search terms, bidding settings and conversion configuration remained items to verify.</li></ul>"""},
+        "execution": {"h": "Two brands, <em>different next steps.</em>",
+            "body": """<ul><li><strong>Axe &amp; Kindle:</strong> prioritized conversion-value validation and purchase/lead tracking, then recommended reviewing campaign allocation, search intent and product-page clarity.</li><li><strong>Every Window:</strong> flagged inconsistent conversion counts across reporting systems, recommended investigating branded-search efficiency and identified quote tracking and cart recovery as opportunities.</li></ul>"""},
         "results": {"h": "Delivered recommendations. <em>Impact to be measured.</em>",
-            "body": """<p>The deliverables were an account audit, a reporting-based campaign analysis and a paid-acquisition growth plan. Each identified priorities, dependencies and measures for evaluating the next step.</p><div class="callout"><b>Status at the time of these documents:</b> the Axe &amp; Kindle review was view-only, Every Window recommendations required account access and approval, and Levo was a proposed launch plan. These documents do not establish implementation or post-change results. No revenue lift, ROAS improvement, cost reduction or lead growth is claimed.</div><p class="small">Sources: my Axe &amp; Kindle Google Ads Audit (Oct 26, 2026; account period Sep 26–Oct 25); Every Window Google Ads Analysis (Oct 28, 2026; campaign period Sep 28–Oct 27, with separate funnel and monthly comparison periods); Levo Paid Ads Growth Plan (website review dated Oct 28, 2026). Historical findings describe those reviews, not the current state of the accounts or websites.</p>"""},
+            "body": """<p>The deliverables were an account audit and a reporting-based campaign analysis. Each identified priorities, dependencies and measures for evaluating the next step.</p><div class="callout"><b>Status at the time of these documents:</b> the Axe &amp; Kindle review was view-only, Every Window recommendations required account access and approval. These documents do not establish implementation or post-change results. No revenue lift, ROAS improvement, cost reduction or lead growth is claimed.</div><p class="small">Sources: my Axe &amp; Kindle Google Ads Audit (Oct 26, 2026; account period Sep 26–Oct 25); Every Window Google Ads Analysis (Oct 28, 2026; campaign period Sep 28–Oct 27, with separate funnel and monthly comparison periods). Historical findings describe those reviews, not the current state of the accounts or websites.</p>"""},
         "takeaways": {"h": "What I would <em>validate next.</em>",
             "body": """<ol class="takeaways"><li>Confirm that purchase, quote and lead events mean the same thing across the reports used to make decisions.</li><li>Review search terms and landing-page intent before treating a campaign label as evidence of buyer quality.</li><li>Use qualified leads and completed purchases to evaluate a test; do not substitute clicks for business outcomes.</li><li>Record a baseline, implement approved changes and compare equivalent periods before attributing an improvement.</li></ol>"""},
     },
     "work_heading": "From finding to <em>next action.</em>",
-    "work_intro": "Portfolio summaries of my October 2026 recommendations, followed by existing Levo creative concepts. These are examples of analysis and planning, not a record of campaign improvements.",
+    "work_intro": "Portfolio summaries of my October 2026 recommendations. These are examples of analysis and planning, not a record of campaign improvements.",
     "work_examples": [
         {"id": "ak-measurement", "title": "Axe & Kindle · Validate the signal",
          "source": "Google Ads account audit · View-only · Oct 26, 2026",
@@ -727,14 +723,8 @@ PAID_ADS_CS = {
          "finding": "Campaign efficiency varied, while Google Ads, GA4 and store reports showed different conversion counts. Quote and configurator activity needed clearer measurement.",
          "action": "Request account access to inspect branded search, search terms and conversion settings; review lower-efficiency campaigns; connect quote, call and cart-recovery paths to reporting.",
          "measure": "Reconciled conversion definitions; branded CPC and conversion efficiency; qualified quotes and calls; cart-to-order rate. Account-level recommendations remain subject to verification."},
-        {"id": "levo-launch", "title": "Levo Aero · Build a measurable launch",
-         "source": "Paid Ads Growth Plan · Proposed strategy · Oct 28, 2026",
-         "finding": "Operators, brokers and travelers needed different messages and conversion paths. The plan identified measurement and website prerequisites before a paid launch.",
-         "action": "Validate tracking and sign-up/demo paths, research keyword demand, then test operator and broker Search campaigns with LinkedIn support. Introduce remarketing when its prerequisites are met.",
-         "measure": "Qualified operator demo requests, broker sign-ups, landing-page conversion rate and cost per qualified lead. Establish baselines from actual campaign data before setting performance targets."},
     ],
-    "sets": [dict(LEVO["sets"][1], title="Levo LinkedIn creative concepts", status="Ad concept · Not campaign results",
-                  desc="Existing portfolio creative for Levo. Shown as design examples alongside the proposed acquisition strategy; these concepts do not demonstrate that a campaign launched or produced results.")],
+    "sets": [],
 }
 
 WEB_CS = {
@@ -757,7 +747,7 @@ WEB_CS = {
         "strategy": {"h": "Keep the brand. Clarify the <em>journey.</em>",
             "body": """<ul><li><strong>Lead with the offer:</strong> use the opening section to establish the brand and a visible action.</li><li><strong>Group related decisions:</strong> bring product or style selection, installation guidance and supporting information into recognizable sections.</li><li><strong>Make trust easier to find:</strong> give customer reviews and supporting content a defined place in the page.</li><li><strong>Carry the visual system through:</strong> apply consistent brand colors, section treatments and footer presentation, and reuse them across page types.</li></ul>"""},
         "role": {"h": "The redesign, <em>shown in context.</em>",
-            "body": """<p>I built <a href="https://www.nxtdib.com/" target="_blank" rel="noopener">nxtdib.com</a> from scratch as part of my multi-brand marketing work. I also redesigned the Every Window homepage, a product page and the installation page, and the Axe &amp; Kindle homepage, product pages and blog page. For Axe &amp; Kindle I redesigned every product page; the oak firewood page below is one example. My contribution covered page design, section hierarchy, imagery placement and calls to action, using the CMS page builder to assemble and refine pages. The supplied captures document these design decisions. My broader website work also includes redesigning <a href="https://levo.aero/" target="_blank" rel="noopener">levo.aero</a>.</p>"""},
+            "body": """<p>I built <a href="https://www.nxtdib.com/" target="_blank" rel="noopener">nxtdib.com</a> from scratch as part of my multi-brand marketing work. I also redesigned the Every Window homepage, a product page and the installation page, and the Axe &amp; Kindle homepage, product pages and blog page. For Axe &amp; Kindle I redesigned every product page; the oak firewood page below is one example. My contribution covered page design, section hierarchy, imagery placement and calls to action, using the CMS page builder to assemble and refine pages. The supplied captures document these design decisions.</p>"""},
         "execution": {"h": "Two brands, <em>two visual systems.</em>",
             "body": """<p><strong>Every Window:</strong> reorganized the installation introduction, changed the installation video from a full-width block to a text-and-video section, brought customer reviews higher into the homepage, and turned the style section into a visual selection grid. The product and installation pages follow the same teal, cream and olive-gold system, with image-led sections and clear calls to action. The redesigned footer uses a stronger deep-teal treatment.</p><p><strong>Axe &amp; Kindle:</strong> reduced the homepage partner-logo display, changed the customer-review grid into horizontal cards, rebuilt the product-page template with size selection and image-led supporting sections, and gave the blog an introduction, category tabs and a card layout. The existing signup and contact sections remain part of the homepage.</p>"""},
         "results": {"h": "The design change is <em>visible.</em>",
@@ -807,7 +797,8 @@ WEB_CS = {
 
 # Keep brand navigation, homepage cards and gallery stable. Capability pages
 # are reached from the homepage analytics section and built with the same template.
-PROJECTS = [AK, NX, EQ, EW, LEVO]
+# Levo source content and assets are retained for later restoration.
+PROJECTS = [AK, NX, EQ, EW]
 # Retain the published capability navigation while making the new study discoverable.
 ANALYTICS_CS["next_case"] = "email-marketing"
 PAID_ADS_CS["next_case"] = "email-marketing"
