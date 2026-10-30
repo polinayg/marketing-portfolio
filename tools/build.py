@@ -292,7 +292,7 @@ def home():
 <dl class="hero-meta">
 <div><dt>Focus</dt><dd>Integrated marketing strategy &amp; execution</dd></div>
 <div><dt>Portfolio</dt><dd>Experience across 5 B2C &amp; B2B brands</dd></div>
-<div><dt>Channels</dt><dd>Social · Email · Websites · Organic Media</dd></div>
+<div><dt>Channels</dt><dd>Social · Email · Websites · Paid &amp; Organic Media</dd></div>
 <div class="hero-toolkit"><dt>Toolkit</dt><dd>CMS · Drip · GA4 · Search Console · Google &amp; Meta Ads · Sprout Social · Buffer · Adobe Premiere Pro · CapCut · AI tools</dd></div>
 </dl></div>
 <div class="home-showcase"><div class="mosaic" aria-label="Original social campaign designs">{mosaic}</div>
