@@ -52,7 +52,7 @@ ABOUT = """<p class="lede">I'm the Multi-Brand Marketing Manager at NXT Companie
 <li><strong>Paid advertising</strong><br>Google Ads · Meta Ads Manager</li>
 <li><strong>Email &amp; CRM</strong><br>Drip · HubSpot</li>
 <li><strong>Websites</strong><br>CMS builds · WordPress · HTML/CSS</li>
-<li><strong>Creative</strong><br>Canva · Photoshop · Premiere Pro · Figma</li>
+<li><strong>Creative</strong><br>Canva · Adobe Photoshop · Adobe Premiere Pro · CapCut · Figma</li>
 <li><strong>Social &amp; workflow</strong><br>Sprout Social · Buffer · Monday.com</li>
 </ul>
 """
