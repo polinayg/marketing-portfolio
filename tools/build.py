@@ -254,7 +254,7 @@ def bars(rows, maxv, fmt="{:,}", unit=""):
 
 def home():
     A = C.ANALYTICS
-    out = head("Polina Gaydamachenko — Multi-Brand Marketing Manager", C.HOME_META, "", extra='<link rel="stylesheet" href="assets/css/home.css?v=2026-10-29-portrait">\n')
+    out = head("Polina Gaydamachenko — Multi-Brand Marketing Manager", C.HOME_META, "", extra='<link rel="stylesheet" href="assets/css/home.css?v=2026-10-29-toolkit">\n')
     out += f'<script type="application/ld+json">{json.dumps(C.JSONLD)}</script>\n'
     out += header()
     mosaic = "".join(f'<a href="{f}" aria-label="{E(lbl)}">{picture(fo, n, alt, "(max-width:760px) 33vw, 200px", eager=i < 3)}</a>'
@@ -290,10 +290,14 @@ def home():
 <div class="btn-row"><a class="btn" href="#capabilities">Explore my work ↓</a><a class="btn ghost" href="#work">Browse by brand</a><a class="btn ghost" href="{C.RESUME_FILE}" download>Download Résumé (PDF) ↓</a></div>
 </div>
 <dl class="hero-meta">
-<div><dt>Focus</dt><dd>Strategy + hands-on execution</dd></div>
-<div><dt>Brands</dt><dd>5 across B2C &amp; B2B</dd></div>
-<div><dt>Channels</dt><dd>Social · Email · Web · Paid</dd></div>
-<div><dt>Toolkit</dt><dd>CMS · Drip · GA4 · Search Console · Google &amp; Meta Ads</dd></div>
+<div><dt>Focus</dt><dd>Integrated marketing strategy &amp; execution</dd></div>
+<div><dt>Portfolio</dt><dd>5 brands across B2C &amp; B2B</dd></div>
+<div><dt>Channels</dt><dd>Social · Email · Websites · Paid media</dd></div>
+<div class="hero-toolkit"><dt>Selected tools</dt><dd>
+<span><strong>Creative</strong> Canva · Adobe Photoshop · Adobe Premiere Pro · CapCut</span>
+<span><strong>Marketing</strong> CMS · Drip · Google &amp; Meta Ads</span>
+<span><strong>Analytics</strong> GA4 · Search Console · Looker Studio</span>
+</dd></div>
 </dl></div>
 <div class="home-showcase"><div class="mosaic" aria-label="Original social campaign designs">{mosaic}</div>
 <a class="home-web-preview" href="website-redesigns.html" aria-label="Explore website redesigns with desktop and mobile examples">
