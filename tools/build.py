@@ -293,11 +293,7 @@ def home():
 <div><dt>Focus</dt><dd>Integrated marketing strategy &amp; execution</dd></div>
 <div><dt>Portfolio</dt><dd>5 brands across B2C &amp; B2B</dd></div>
 <div><dt>Channels</dt><dd>Social · Email · Websites · Paid media</dd></div>
-<div class="hero-toolkit"><dt>Selected tools</dt><dd>
-<span><strong>Creative</strong> Canva · Adobe Photoshop · Adobe Premiere Pro · CapCut</span>
-<span><strong>Marketing</strong> CMS · Drip · Google &amp; Meta Ads</span>
-<span><strong>Analytics</strong> GA4 · Search Console · Looker Studio</span>
-</dd></div>
+<div class="hero-toolkit"><dt>Toolkit</dt><dd>CMS · Drip · GA4 · Search Console · Google &amp; Meta Ads · Sprout Social · Buffer · AI tools</dd></div>
 </dl></div>
 <div class="home-showcase"><div class="mosaic" aria-label="Original social campaign designs">{mosaic}</div>
 <a class="home-web-preview" href="website-redesigns.html" aria-label="Explore website redesigns with desktop and mobile examples">
